@@ -17,6 +17,8 @@ mount(function () {
     <livewire:landing-page-body />
     @elseif($path == 'about')
     <livewire:about />
+    @elseif(in_array($path,['technology-scouting','white-space-analysis','technology-landscape','invalidity-contentions','state-of-art','patent-infringement','evidence-of-use','patent-valuation','market-report','competitive-analysis']))
+    <livewire:solution />
     @endif
     <livewire:footer />
 </div>
