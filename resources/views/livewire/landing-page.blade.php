@@ -19,6 +19,8 @@ mount(function () {
     <livewire:about />
     @elseif(in_array($path,['technology-scouting','white-space-analysis','technology-landscape','invalidity-contentions','state-of-art','patent-infringement','evidence-of-use','patent-valuation','market-report','competitive-analysis']))
     <livewire:solution />
+    @elseif($path == 'career')
+    <livewire:career />
     @endif
     <livewire:footer />
 </div>

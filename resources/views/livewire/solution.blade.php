@@ -249,4 +249,69 @@ mount(function () {
             </div>
         </div>
     </div>
+    <div class="grid grid-cols-1 gap-8 px-40 py-16 text-gray-800">
+        <div class="text-2xl font-semibold">Why choose us?</div>
+        <div class="h-min grid grid-cols-1 gap-4 font-semibold">
+            <div class="flex justify-between items-center w-min whitespace-nowrap gap-2">
+                <div>
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
+                    </svg>
+                </div>
+                <div>
+                    Adaptable approach for valuation of a patent in any technology
+                </div>
+            </div>
+            <div class="flex justify-between items-center w-min whitespace-nowrap gap-2">
+                <div>
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
+                    </svg>
+                </div>
+                <div>
+                    Expertise in deciding the right value indicator based on subject patent technology
+                </div>
+            </div>
+            <div class="flex justify-between items-center w-min whitespace-nowrap gap-2">
+                <div>
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
+                    </svg>
+                </div>
+                <div>
+                    Deriving a practical value based on highly researched facts
+                </div>
+            </div>
+            <div class="flex justify-between items-center w-min whitespace-nowrap gap-2">
+                <div>
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
+                    </svg>
+                </div>
+                <div>
+                    Evaluation of the patents in technologies that are at early stages of development
+                </div>
+            </div>
+            <div class="flex justify-between items-center w-min whitespace-nowrap gap-2">
+                <div>
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
+                    </svg>
+                </div>
+                <div>
+                    Quick, Accurate and Cost efficient – 1/5th standard market rates
+                </div>
+            </div>
+            <div class="flex justify-between items-center w-min whitespace-nowrap gap-2">
+                <div>
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
+                    </svg>
+                </div>
+                <div>
+                    Valuation certificate
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
