@@ -5,7 +5,13 @@ use Livewire\Volt\Volt;
 
 Volt::route('/', 'landing-page')->name('home');
 Volt::route('/about', 'landing-page')->name('about');
+Volt::route('/practice-domain', 'landing-page')->name('practice-domain');
 Volt::route('/career', 'landing-page')->name('career');
+Volt::route('/login', 'landing-page')->name('login');
+Volt::route('/dashboard', 'landing-page')->name('dashboard');
+
+
+// Solutions Page
 Volt::route('/technology-scouting', 'landing-page')->name('technology-scouting');
 Volt::route('/white-space-analysis', 'landing-page')->name('white-space-analysis');
 Volt::route('/technology-landscape', 'landing-page')->name('technology-landscape');

@@ -171,7 +171,7 @@ use function Livewire\Volt\{state};
                 </div>
             </div>
         </div>
-        <div>PRACTICE DOMAIN</div>
+        <a href="/practice-domain" wire:navigate class="hover:text-sky-400">PRACTICE DOMAIN</a>
         <div class="flex justify-between items-center group/navbar cursor-pointer gap-2 relative">
             <div class="group-hover/navbar:text-blue-500">
                 INSIGHT
