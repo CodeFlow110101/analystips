@@ -41,6 +41,8 @@ mount(function () {
     <livewire:solution />
     @elseif($path == 'career')
     <livewire:career />
+    @elseif($path == 'blog')
+    <livewire:blog />
     @endif
     <livewire:footer />
     @endif
