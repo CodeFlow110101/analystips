@@ -10,7 +10,7 @@ usesPagination();
 state(['search', 'id']);
 
 with(fn() => [
-    'blogs' => Blog::where('title', 'ilike', '%' . $this->search . '%')->when($this->id, function ($query) {
+    'blogs' => Blog::where('title', 'like', '%' . $this->search . '%')->when($this->id, function ($query) {
         return $query->where('id', $this->id);
     })->orderBy('created_at', 'desc')->paginate(3),
     'recent_blogs' => Blog::orderBy('created_at', 'desc')->get()->take(5)
