@@ -31,8 +31,10 @@ mount(function ($id) {
     <div class="flex justify-between gap-4 px-48 py-20">
         <div class="w-4/5 h-min grid grid-cols-1 gap-8">
             @foreach($blogs as $blog)
-            <div class="h-min grid grid-cols-1 gap-4 text-gray-800 font-semibold">
-                <div class="flex justify-center"><img src="{{asset('storage/'.$blog->image)}}" class="w-auto h-64"></div>
+            <div wire:key="{{$blog->id}}" class="h-min grid grid-cols-1 gap-4 text-gray-800 font-semibold">
+                <div class="flex justify-center">
+                    <img src="{{asset('storage/'.$blog->image)}}" class="w-auto h-64">
+                </div>
                 <a href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-sky-400 cursor-pointer">
                     {{$blog->title}}
                 </a>
@@ -67,7 +69,7 @@ mount(function ($id) {
             </div>
             <div class="h-min text-left grid grid-cols-1 gap-4">
                 @foreach($recent_blogs as $blog)
-                <a href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-sky-400 text-gray-800 font-semibold cursor-pointer">{{$blog->title}}</a>
+                <a wire:key="{{$blog->id}}" href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-sky-400 text-gray-800 font-semibold cursor-pointer">{{$blog->title}}</a>
                 @endforeach
             </div>
         </div>
