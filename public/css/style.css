@@ -6,3 +6,12 @@
     background: rgb(56 189 248);
     border-radius: 10px;
   }
+
+  .open-sans-font {
+    font-family: "Open Sans";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }

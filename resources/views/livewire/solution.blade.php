@@ -39,7 +39,7 @@ mount(function () {
             <livewire:solutions.competitive-analysis />
             @endif
         </div>
-        <div class="w-1/5 h-min grid grid-cols-1 gap-2">
+        <div class="w-1/5 h-min grid grid-cols-1 gap-2 font-medium">
             <a href="/technology-scouting" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'technology-scouting') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
                 <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
                     <div>

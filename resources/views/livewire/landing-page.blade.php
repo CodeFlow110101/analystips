@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Blog;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -7,7 +8,7 @@ use function Livewire\Volt\{layout, state, mount};
 
 layout('components.layouts.app');
 
-state(['path']);
+state(['path', 'blog_id']);
 
 mount(function () {
     $this->path = request()->path();
@@ -17,6 +18,15 @@ mount(function () {
             return $this->redirectRoute('login', navigate: true);
         } elseif ($this->path == 'login' && Auth::check()) {
             return $this->redirectRoute('dashboard', navigate: true);
+        }
+    }
+
+    if ($this->path == 'blog' && request()->has('id')) {
+
+        if (Blog::where('id', request('id'))->exists()) {
+            $this->blog_id = request('id');
+        } else {
+            return $this->redirectRoute('blog', navigate: true);
         }
     }
 });
@@ -42,7 +52,7 @@ mount(function () {
     @elseif($path == 'career')
     <livewire:career />
     @elseif($path == 'blog')
-    <livewire:blog />
+    <livewire:blog :id="$blog_id" />
     @endif
     <livewire:footer />
     @endif
