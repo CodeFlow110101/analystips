@@ -25,7 +25,7 @@ use function Livewire\Volt\{state};
                 </svg>
             </div>
             <div class="absolute transition-transform duration-200 scale-y-0 group-hover/navbar:scale-100 w-full top-6 pt-2 origin-top">
-                <div class="bg-white shadow-md shadow-black -mx-12 text-gray-800">
+                <div class="bg-white shadow-md shadow-black -mx-14 text-gray-800">
                     <a href="/about" wire:navigate class="text-sm cursor-pointer group hover:text-blue-500">
                         <div class="p-1.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
                             <div>
@@ -37,14 +37,25 @@ use function Livewire\Volt\{state};
                         </div>
                     </a>
                     <div class="border-t border-gray-800"></div>
-                    <a href="/about" wire:navigate class="text-sm cursor-pointer group hover:text-blue-500">
+                    <a href="/terms-and-conditions" wire:navigate class="text-sm cursor-pointer group hover:text-blue-500">
                         <div class="p-1.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
                             <div>
                                 <svg class="w-3 h-3 text-gray-800 group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
                                 </svg>
                             </div>
-                            <div>What we do</div>
+                            <div>Terms and Conditions</div>
+                        </div>
+                    </a>
+                    <div class="border-t border-gray-800"></div>
+                    <a href="/privacy-policy" wire:navigate class="text-sm cursor-pointer group hover:text-blue-500">
+                        <div class="p-1.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
+                            <div>
+                                <svg class="w-3 h-3 text-gray-800 group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
+                                </svg>
+                            </div>
+                            <div>Privacy Policy</div>
                         </div>
                     </a>
                 </div>
@@ -219,6 +230,6 @@ use function Livewire\Volt\{state};
             </div>
         </div>
         <a href="/career" wire:navigate class="hover:text-sky-400">CAREER</a>
-        <div>CONTACT</div>
+        <a href="/contact-us" wire:navigate class="hover:text-sky-400">CONTACT</a>
     </div>
 </div>

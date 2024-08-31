@@ -51,6 +51,12 @@ mount(function () {
     <livewire:solution />
     @elseif($path == 'career')
     <livewire:career />
+    @elseif($path == 'terms-and-conditions')
+    <livewire:terms-and-conditions />
+    @elseif($path == 'privacy-policy')
+    <livewire:privacy-policy />
+    @elseif($path == 'contact-us')
+    <livewire:contact-us />
     @elseif($path == 'blog')
     <livewire:blog :id="$blog_id" />
     @endif

@@ -11,7 +11,9 @@ Volt::route('/career', 'landing-page')->name('career');
 Volt::route('/login', 'landing-page')->name('login');
 Volt::route('/dashboard', 'landing-page')->name('dashboard');
 Volt::route('/blog', 'landing-page')->name('blog');
-
+Volt::route('/terms-and-conditions', 'landing-page')->name('terms-and-conditions');
+Volt::route('/privacy-policy', 'landing-page')->name('privacy-policy');
+Volt::route('/contact-us', 'landing-page')->name('contact-us');
 
 // Solutions Page
 Volt::route('/technology-scouting', 'landing-page')->name('technology-scouting');

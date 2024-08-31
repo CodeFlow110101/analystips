@@ -1,8 +1,13 @@
 <?php
 
-use function Livewire\Volt\{state};
+use App\Models\Blog;
+use function Livewire\Volt\{with, usesPagination};
 
-//
+usesPagination();
+
+with(fn() => [
+    'blogs' => Blog::orderBy('created_at', 'desc')->get()->take(3)
+]);
 
 ?>
 
@@ -34,7 +39,7 @@ use function Livewire\Volt\{state};
                 <div class="text-2xl tracking-wider uppercase font-bold">what we offer as reliable company</div>
                 <div class="text-xs leading-6">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum.</div>
                 <div>
-                    <div class="text-center text-white uppercase text-base bg-sky-400 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Contact us</div>
+                    <a href="/contact-us" wire:navigate class="text-center text-white uppercase text-base bg-sky-400 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Contact us</a>
                 </div>
             </div>
         </div>
@@ -327,45 +332,28 @@ use function Livewire\Volt\{state};
         <div class="text-sky-400 text-center uppercase">accusam et justo duo dolores et ea rebum. Stet clita no sea</div>
         <div class="font-bold text-2xl text-gray-800 tracking-wider text-center uppercase">Latest news from blog</div>
         <div class="grid grid-cols-3 gap-12 mt-8">
+            @foreach($blogs as $blog)
             <div class="grid grid-cols-1 gap-2">
-                <div class="flex items-center justify-center w-full h-56 bg-gray-300 rounded sm:w-96">
-                    <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                        <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                    </svg>
+                <div class="flex justify-center">
+                    <img src="{{asset('storage/'.$blog->image)}}" class="w-auto h-64">
                 </div>
-                <div class="font-light text-lg hover:text-sky-400">Stet clita ea et gubergren, kasd magna</div>
-                <div class="text-sky-400">Jonathan Doe <span class="text-gray-600 font-light">/ 12 Jan. 2015</span></div>
-                <div class="text-sm leading-6 font-light text-gray-800">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame.</div>
+                <a href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-sky-400 text-xl cursor-pointer">
+                    {{$blog->title}}
+                </a>
+                <div class="text-sm text-gray-400 font-medium w-min whitespace-nowrap flex justify-center gap-2 items-center">
+                    <div>
+                        <svg class="w-4 h-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <div>{{ \Carbon\Carbon::parse($blog->created_at)->format('d F Y') }}</div>
+                </div>
+                <div class="text-sm leading-6 font-light text-gray-800">{{Str::limit($blog->description, 150)}}</div>
                 <div class="pt-4">
-                    <div class="text-center text-white uppercase text-xs rounded-sm bg-sky-400 whitespace-nowrap py-2 px-6 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Read more</div>
+                    <a href="/blog?id={{$blog->id}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-sky-400 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Read more</a>
                 </div>
             </div>
-            <div class="grid grid-cols-1 gap-2">
-                <div class="flex items-center justify-center w-full h-56 bg-gray-300 rounded sm:w-96">
-                    <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                        <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                    </svg>
-                </div>
-                <div class="font-light text-lg hover:text-sky-400">Stet clita ea et gubergren, kasd magna</div>
-                <div class="text-sky-400">Jonathan Doe <span class="text-gray-600 font-light">/ 12 Jan. 2015</span></div>
-                <div class="text-sm leading-6 font-light text-gray-800">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame.</div>
-                <div class="pt-4">
-                    <div class="text-center text-white uppercase text-xs rounded-sm bg-sky-400 whitespace-nowrap py-2 px-6 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Read more</div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 gap-2">
-                <div class="flex items-center justify-center w-full h-56 bg-gray-300 rounded sm:w-96">
-                    <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                        <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                    </svg>
-                </div>
-                <div class="font-light text-lg hover:text-sky-400">Stet clita ea et gubergren, kasd magna</div>
-                <div class="text-sky-400">Jonathan Doe <span class="text-gray-600 font-light">/ 12 Jan. 2015</span></div>
-                <div class="text-sm leading-6 font-light text-gray-800">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit ame.</div>
-                <div class="pt-4">
-                    <div class="text-center text-white uppercase text-xs rounded-sm bg-sky-400 whitespace-nowrap py-2 px-6 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Read more</div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
