@@ -29,3 +29,6 @@ Volt::route('/competitive-analysis', 'landing-page')->name('competitive-analysis
 
 //File Uploads
 Route::post('/upload-image', [FileUploads::class, 'storeImage']);
+
+
+Volt::route('/movies', 'landing-page')->name('movies');
