@@ -1,8 +1,19 @@
 <?php
 
-use function Livewire\Volt\{state};
+use function Livewire\Volt\{state, rules};
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Inquery;
 
-//
+state(['name', 'email', 'contact', 'file', 'comment']);
+
+rules(['name' => 'required|min:3', 'email' => 'required|email', 'contact' => 'required', 'file' => 'required', 'comment' => 'required']);
+
+$sendMail = function () {
+    $this->validate();
+    Mail::to('kedarenishant11111@gmail.com')->send(new Inquery($this->name, $this->email, $this->contact, $this->country, $this->comment));
+    $this->dispatch('show-toastr', message: 'Message Sent');
+    $this->reset();
+};
 
 ?>
 
@@ -31,35 +42,40 @@ use function Livewire\Volt\{state};
                 <div class="grid grid-cols-1 gap-2">
                     <div>Your Name*</div>
                     <div>
-                        <input placeholder="Your Name" class="bg-gray-100 px-4 py-3 text-sm w-full outline-none">
+                        <input wire:model="name" placeholder="Your Name" class="bg-gray-100 p-4 w-full outline-none transition-all duration-500 focus:shadow-lg focus:bg-transparent">
+                        <div class="text-red-500 text-sm">@error('name') {{ $message }} @enderror</div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
                     <div>Your Email*</div>
                     <div>
-                        <input placeholder="Your Email" class="bg-gray-100 px-4 py-3 text-sm w-full outline-none">
+                        <input wire:model="email" placeholder="Your Email" class="bg-gray-100 p-4 w-full outline-none transition-all duration-500 focus:shadow-lg focus:bg-transparent">
+                        <div class="text-red-500 text-sm">@error('email') {{ $message }} @enderror</div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
                     <div>Contact Number*</div>
                     <div>
-                        <input placeholder="Contact Number" class="bg-gray-100 px-4 py-3 text-sm w-full outline-none">
+                        <input wire:model="contact" placeholder="Contact Number" class="bg-gray-100 p-4 w-full outline-none transition-all duration-500 focus:shadow-lg focus:bg-transparent">
+                        <div class="text-red-500 text-sm">@error('contact') {{ $message }} @enderror</div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
                     <div>Comment*</div>
                     <div>
-                        <textarea rows="4" class="text-sm p-2.5 w-full bg-gray-100 outline-none" placeholder="Comment"></textarea>
+                        <textarea wire:model="comment" rows="4" class="block font-medium text-gray-800 text-sm bg-gray-100 p-4 w-full outline-none transition-colors transition-shadow duration-500 focus:shadow-lg focus:bg-transparent" placeholder="Comment"></textarea>
+                        <div class="text-red-500 font-normal text-sm">@error('comment') {{ $message }} @enderror</div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
                     <div>Submit your CV</div>
                     <div>
-                        <input type="file" placeholder="Contact Number" class="bg-gray-100 px-4 py-3 text-sm w-full outline-none">
+                        <input wire:model="file" type="file" placeholder="Contact Number" class="bg-gray-100 p-4 w-full outline-none transition-all duration-500 focus:shadow-lg focus:bg-transparent" accept=".pdf">
+                        <div class="text-red-500 font-normal text-sm">@error('file') {{ $message }} @enderror</div>
                     </div>
                 </div>
                 <div>
-                    <div class="text-center my-4 text-white uppercase text-sm rounded-sm bg-sky-400 whitespace-nowrap py-3 px-6 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Submit</div>
+                    <div wire:click="sendMail" class="text-center my-4 text-white uppercase text-sm rounded-sm bg-sky-400 whitespace-nowrap py-3 px-6 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Submit</div>
                 </div>
             </div>
         </div>

@@ -15,8 +15,8 @@ mount(function () {
         {{str_replace('-',' ',$path)}}
     </div>
     <div class="px-40 py-20 flex justify-between gap-4">
-        <div class="w-4/5 grid grid-cols-1 gap-4 h-min">
-            <div class="capitalize text-2xl tracking-wide text-gray-800 font-light">{{str_replace('-',' ',$path)}}</div>
+        <div class="w-4/5 grid grid-cols-1 gap-12 h-min pr-32">
+            <div class="capitalize text-3xl tracking-wide text-sky-400 font-medium">{{str_replace('-',' ',$path)}}</div>
             @if($path == 'technology-scouting')
             <livewire:solutions.technology-scouting />
             @elseif($path == 'white-space-analysis')

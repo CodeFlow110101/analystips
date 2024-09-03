@@ -41,8 +41,6 @@ mount(function () {
     <livewire:admin.dashboard />
     @endif
 
-    @elseif($path == 'movies')
-    <livewire:movies />
     @else
     <livewire:navbar />
     @if($path == '/')
