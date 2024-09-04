@@ -47,7 +47,7 @@ mount(function () {
     <livewire:landing-page-body />
     @elseif($path == 'about' || $path == 'practice-domain')
     <livewire:about />
-    @elseif(in_array($path,['technology-scouting','white-space-analysis','technology-landscape','invalidity-contentions','state-of-art','patent-infringement','evidence-of-use','patent-valuation','market-report','competitive-analysis']))
+    @elseif(in_array($path,['technology-scouting','white-space-analysis','technology-landscape','invalidity-contentions','state-of-the-art-search','patent-valuation','evidence-of-use','patent-valuation','market-report','competitive-analysis']))
     <livewire:solution />
     @elseif($path == 'career')
     <livewire:career />

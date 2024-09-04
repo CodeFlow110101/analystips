@@ -43,24 +43,5 @@ use function Livewire\Volt\{state};
             <span class="text-2xl tracking-wide text-sky-400 font-medium">Purpose of Technology Scouting</span>
             The primary purpose of Technology Scouting is to ensure that your business remains competitive and innovative in an ever-changing technological landscape. Whether you’re looking to develop new products, enhance existing ones, or enter new markets, technology scouting provides the intelligence needed to make informed decisions that drive growth and success.
         </div>
-        <div class="grid grid-cols-1 gap-3 h-min">
-            <div class="text-2xl tracking-wide text-sky-400 font-medium">
-                What We Can Do for You
-            </div>
-            <div class="grid grid-cols-1 gap-6 h-min text-sm font-normal text-gray-800">
-                <div>
-                    <span class="tracking-wide text-sky-400 font-medium">1) Identify Emerging Technologies: </span>We conduct comprehensive searches to identify technologies that can offer you a competitive edge.
-                </div>
-                <div>
-                    <span class="tracking-wide text-sky-400 font-medium">2) Evaluate Technology Potential: </span>Our experts assess the feasibility, market potential, and alignment of new technologies with your strategic goals.
-                </div>
-                <div>
-                    <span class="tracking-wide text-sky-400 font-medium">3) Facilitate Strategic Partnerships: </span>We connect you with technology providers, startups, and research institutions that can help bring these innovations to life.
-                </div>
-                <div>
-                    <span class="tracking-wide text-sky-400 font-medium">4) Provide Actionable Insights: </span>Our detailed reports and recommendations help you make informed decisions on technology adoption and integration.
-                </div>
-            </div>
-        </div>
     </div>
 </div>
