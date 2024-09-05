@@ -90,7 +90,7 @@ $sendMail = function () {
                 <div class="text-red-500 font-normal text-sm">@error('comment') {{ $message }} @enderror</div>
             </div>
             <div class="flex justify-center">
-                <div wire:loading.class="pointer-events-none" wire:target="sendMail" wire:click="sendMail" class="text-center font-medium group text-white uppercase rounded-sm bg-sky-400 whitespace-nowrap py-2 px-6 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">
+                <div wire:loading.class="pointer-events-none" wire:target="sendMail" wire:click="sendMail" class="pointer-events-none text-center font-medium group text-white uppercase rounded-sm bg-sky-400 whitespace-nowrap py-2 px-6 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">
                     <div wire:loading.class="hidden" wire:target="sendMail" class="flex justify-between items-center gap-4">
                         <div>Send Message</div>
                         <div>

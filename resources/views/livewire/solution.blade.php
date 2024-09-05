@@ -2,7 +2,7 @@
 
 use function Livewire\Volt\{state, mount};
 
-state(['path', 'description', 'whoPerforms', 'benefits', 'purpose', 'whatWeDo', 'whyChooseUs', 'additionalInfo']);
+state(['path', 'description', 'whoPerforms', 'benefits', 'purpose', 'whatWeDo', 'whyChooseUs', 'additionalInfo', 'bgImage']);
 
 mount(function () {
     $this->path = request()->path();
@@ -36,6 +36,16 @@ mount(function () {
         'patent-valuation' => [
             "Patent Valuation is a critical service for businesses looking to understand the financial worth of their intellectual property. This valuation is essential for various strategic decisions, including licensing, mergers and acquisitions, investment, and litigation. An accurate patent valuation helps you to negotiate better deals, attract investment, and make informed decisions about managing your IP portfolio.",
             "Our Patent Valuation service involves a comprehensive analysis of the patent's potential market impact, its income-generating capabilities, and its strategic importance to your business. We use a combination of market analysis, financial modeling, and comparative assessments to provide a precise valuation of your patents. Whether you are preparing for a licensing negotiation, selling your IP, or defending it in court, our valuation service gives you the insights you need to maximize the value of your intellectual property.",
+        ],
+
+        'market-report' => [
+            "Market Reports are in-depth analyses that provide a detailed overview of specific markets, including size, growth trends, key players, and competitive dynamics. These reports are invaluable for businesses looking to enter new markets, launch new products, or refine their strategic planning. By understanding the market landscape, you can make informed decisions that align with your business goals and maximize your chances of success.",
+            "Our Market Reports service goes beyond simple data collection. We provide comprehensive analyses that include market segmentation, consumer behavior, competitive benchmarking, and trend identification. Each report is tailored to your specific needs, focusing on the markets, products, or regions most relevant to your business. This service is essential for reducing risk, identifying opportunities, and ensuring that your business strategies are grounded in solid market intelligence.",
+        ],
+
+        'competitive-analysis' => [
+            "Competitive Analysis is a strategic service that provides a deep dive into the strengths, weaknesses, strategies, and market positions of your competitors. This analysis is crucial for understanding your competitive environment and for identifying opportunities to differentiate your offerings, capture market share, and mitigate potential risks.",
+            "Our Competitive Analysis service includes a thorough examination of your competitors’ products, pricing strategies, marketing tactics, and technological advancements. We also analyze their market positioning, customer base, and growth strategies to provide a comprehensive view of the competitive landscape. With this information, we help you develop strategies to outperform your rivals, capitalize on market opportunities, and avoid threats. Whether you’re planning a new product launch, entering a new market, or simply looking to strengthen your market position, our Competitive Analysis service provides the insights you need to make informed, strategic decisions.",
         ]
     ];
 
@@ -46,6 +56,8 @@ mount(function () {
         'invalidity-contentions' => "Our Invalidity Contentions service is handled by a team of patent attorneys, legal experts, and prior art search specialists. These professionals have extensive experience in patent law and litigation, ensuring that your case is built on a strong foundation of evidence and legal expertise.",
         'state-of-the-art-search' => "Our State of the Art Searches are conducted by a team of patent analysts, technology experts, and industry researchers. These professionals use advanced search tools and databases to gather and analyze the most relevant and up-to-date information in your field of interest.",
         'patent-valuation' => "Our Patent Valuation services are conducted by a team of financial analysts, IP experts, and patent attorneys. These professionals use a combination of market analysis, financial modeling, and legal expertise to provide a precise valuation of your patents.",
+        'market-report' => "Our Market Reports are developed by a team of market analysts, industry experts, and business strategists. They gather and analyze data from various sources, including market research firms, industry publications, and financial reports, to create comprehensive and actionable insights.",
+        'competitive-analysis' => "Our Competitive Analysis services are performed by a team of market analysts, business strategists, and industry experts. These professionals use a combination of primary and secondary research, data analytics, and industry insights to provide a comprehensive view of your competitive landscape.",
     ];
 
     $this->benefits = [
@@ -86,6 +98,19 @@ mount(function () {
             'Strategic Decision-Making' => "Make informed decisions about selling, licensing, or defending your patents based on their financial value.",
             'Investment Attraction' => "Attract investors by demonstrating the value of your IP assets.",
             'Litigation Support' => "Use patent valuation to support damage claims or settlements in litigation.",
+        ],
+
+        'market-report' => [
+            'Informed Decision-Making' => "Use detailed market data to guide your business strategies, investments, and product development efforts.",
+            'Risk Mitigation' => "Identify potential risks and challenges in the market before making significant investments.",
+            'Opportunity Identification' => "Discover new market opportunities, emerging trends, and areas for expansion.",
+        ],
+
+        'competitive-analysis' => [
+            'Strategic Positioning' => "Understand how your products and services compare to those of your competitors, allowing you to position yourself more effectively in the market.",
+            'Identify Opportunities' => "Discover gaps in the market that you can exploit to gain a competitive advantage.",
+            'Mitigate Risks' => "Anticipate potential threats from competitors and develop strategies to counteract them.",
+            'Benchmarking' => "Measure your performance against industry leaders and identify areas for improvement.",
         ]
 
     ];
@@ -97,6 +122,8 @@ mount(function () {
         'invalidity-contentions' => "The purpose of Invalidity Contentions is to protect your business from patent infringement claims by proving that the patent in question is not valid. This can be achieved by identifying prior art that predates the patent or by highlighting errors in the patent’s claims.",
         'state-of-the-art-search' => "The primary purpose of a State of the Art Search is to establish the baseline of existing technologies in a specific field. This search helps you determine whether your invention is new and non-obvious, which are key criteria for patentability. It also provides valuable insights into how your technology compares to the latest developments in the industry.",
         'patent-valuation' => "The purpose of Patent Valuation is to provide a clear and accurate understanding of the monetary worth of your patents. This valuation is essential for maximizing the returns from your intellectual property, whether through licensing, sales, or litigation.",
+        'market-report' => "The purpose of Market Reports is to provide businesses with a deep understanding of the market landscape. This includes identifying market trends, understanding competitive dynamics, and evaluating the potential for new products or services. Market Reports are essential for making data-driven decisions that align with your business goals.",
+        'competitive-analysis' => "The primary purpose of Competitive Analysis is to give your business a clear understanding of where it stands in relation to its competitors. This analysis informs your strategic decisions, helping you to develop products, services, and marketing strategies that outperform the competition.",
     ];
 
     $this->whatWeDo = [
@@ -141,6 +168,22 @@ mount(function () {
             'Cost Approach' => "We consider the costs associated with developing the technology and obtaining the patent, providing a cost-based valuation.",
             'Comparative Analysis' => "We compare your patents with similar patents that have been licensed or sold to determine their market value.",
             'Comprehensive Reports' => "Our detailed reports provide a clear explanation of the valuation process and the factors that influence the value of your patents.",
+        ],
+
+        'market-report' => [
+            'Market Size and Growth Analysis' => "We analyze the size of the market, historical growth rates, and future projections to help you understand the potential for your products or services.",
+            'Competitive Landscape' => "Our reports include a detailed analysis of the key players in the market, including their market share, strengths, weaknesses, and strategic positioning.",
+            'Trend Analysis' => "We identify and analyze emerging trends, consumer behavior, and technological advancements that could impact your business.",
+            'Opportunities and Challenges' => "Our reports highlight the opportunities for growth and the challenges you may face in the market, helping you plan strategically.",
+            'Customized Reports' => "We tailor our Market Reports to focus on the specific markets, products, or regions that are most relevant to your business.",
+        ],
+
+        'competitive-analysis' => [
+            'Competitor Identification' => "We identify and profile your key competitors, including their strengths, weaknesses, market share, and strategic focus.",
+            'Product Comparison' => "We compare your products and services with those of your competitors, highlighting areas where you have a competitive advantage or where improvements are needed.",
+            'Market Positioning' => "We analyze how your competitors are positioned in the market and provide insights on how you can differentiate yourself effectively.",
+            'Strategic Recommendations' => "Based on our analysis, we offer actionable recommendations to help you improve your competitive position and capitalize on market opportunities.",
+            'Ongoing Monitoring' => "We provide continuous monitoring of your competitive landscape, keeping you informed of any changes that could impact your business.",
         ]
     ];
 
@@ -181,10 +224,24 @@ mount(function () {
         ],
 
         'patent-valuation' => [
-            '•	Expert Team' => "Our team combines financial expertise with deep knowledge of intellectual property law to deliver accurate and reliable valuations.",
-            '•	Proven Methodologies' => "We use established valuation methods that are recognized and accepted by investors, courts, and industry professionals.",
-            '•	Tailored Services' => "We customize our valuation services to meet the specific needs of your business, whether you are preparing for a licensing negotiation, a sale, or litigation.",
-            '•	Strategic Insights' => "Our valuations are not just numbers; they come with strategic recommendations that help you maximize the value of your IP assets.",
+            'Expert Team' => "Our team combines financial expertise with deep knowledge of intellectual property law to deliver accurate and reliable valuations.",
+            'Proven Methodologies' => "We use established valuation methods that are recognized and accepted by investors, courts, and industry professionals.",
+            'Tailored Services' => "We customize our valuation services to meet the specific needs of your business, whether you are preparing for a licensing negotiation, a sale, or litigation.",
+            'Strategic Insights' => "Our valuations are not just numbers; they come with strategic recommendations that help you maximize the value of your IP assets.",
+        ],
+
+        'market-report' => [
+            'Industry Expertise' => "Our analysts have deep knowledge of various industries, ensuring that our reports are accurate and relevant.",
+            'Comprehensive Analysis' => "We provide a thorough analysis that covers all aspects of the market, from macroeconomic factors to competitive dynamics.",
+            'Data-Driven Insights' => "Our reports are based on extensive data collection and analysis, providing you with insights that are both actionable and reliable.",
+            'Strategic Guidance' => "In addition to data, we offer strategic recommendations that help you navigate the market effectively and capitalize on opportunities.",
+        ],
+
+        'competitive-analysis' => [
+            'In-Depth Expertise' => "Our team has extensive experience in conducting competitive analysis across a wide range of industries, ensuring that you receive insights that are both accurate and actionable.",
+            'Comprehensive Approach' => "We consider all aspects of your competitors’ strategies, from their marketing and sales tactics to their product development and pricing.",
+            'Customized Analysis' => "We tailor our competitive analysis to your specific industry, business model, and strategic goals.",
+            'Proactive Insights' => "Our analysis not only helps you understand your current position but also provides forward-looking insights to help you stay ahead of the competition.",
         ]
     ];
 
@@ -195,16 +252,29 @@ mount(function () {
         'invalidity-contentions' => 'Invalidity Contentions are a critical tool in defending your business against patent infringement claims. By challenging the validity of a patent, you can protect your company from legal risks and gain a strategic advantage in the market. Our team’s expertise and dedication ensure that your invalidity contentions are thorough, well-supported, and effective.',
         'state-of-the-art-search' => 'A State of the Art Search is essential for any business looking to innovate responsibly and effectively. By understanding the current technological landscape, you can ensure that your innovations are truly groundbreaking and have the potential to succeed in the market. Our expertise and thorough approach ensure that you have all the information you need to move forward with confidence.',
         'patent-valuation' => "Understanding the value of your patents is critical for making informed business decisions. Whether you are looking to license your technology, attract investment, or defend your IP in court, a thorough and accurate patent valuation is essential. Our team’s expertise and comprehensive approach ensure that you have the information you need to leverage your intellectual property effectively.",
+        'market-report' => "Market Reports are a vital resource for any business looking to succeed in today’s competitive environment. Whether you’re entering a new market, launching a new product, or planning your growth strategy, our Market Reports provide the insights you need to make informed decisions and achieve your business goals.",
+        'competitive-analysis' => "Understanding your competition is crucial to your business’s success. Competitive Analysis gives you the insights needed to outperform your rivals, capitalize on market opportunities, and avoid potential threats. With our comprehensive analysis, you can confidently navigate the competitive landscape and make strategic decisions that drive growth and profitability.",
+    ];
+
+    $this->bgImage = [
+        'technology-scouting' => "humanoid-8722271_1280.webp",
+        'white-space-analysis' => "pexels-olia-danilevich-5088017.jpg",
+        'technology-landscape' => "pexels-pixabay-459728.jpg",
+        'invalidity-contentions' => "pexels-cytonn-955405.jpg",
+        'state-of-the-art-search' => "pexels-artempodrez-5726835.jpg",
+        'patent-valuation' => "pexels-hillaryfox-1595385.jpg",
+        'market-report' => "pexels-goumbik-669621.jpg",
+        'competitive-analysis' => "pexels-shkrabaanthony-5816291.jpg",
     ];
 });
 
 ?>
 
 <div>
-    <div class="h-96 bg-gray-800 pt-24 uppercase text-white text-4xl font-light tracking-wide flex justify-center items-center">
+    <div class="h-96 mt-24 uppercase text-white text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/'.$bgImage[$path]) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         {{str_replace('-',' ',$path)}}
     </div>
-    <div class="px-40 py-20 flex justify-between gap-4">
+    <div class=" px-40 py-20 flex justify-between gap-4">
         <div class="w-4/5 grid grid-cols-1 gap-12 h-min pr-32">
             <div class="capitalize text-3xl tracking-wide text-sky-400 font-medium">{{str_replace('-',' ',$path)}}</div>
             <div class="grid grid-cols-1 gap-4 h-min">
@@ -218,7 +288,7 @@ mount(function () {
                     </div>
 
                     <div class="text-sm leading-2 font-normal text-gray-800 text-justify">
-                        <span class="text-2xl tracking-wide text-sky-400 font-medium capitalize">Who Performs {{str_replace('-',' ',$path)}}@if($path == 'technology-landscape') {{'Analysis'}}@endif?</span>
+                        <span class="text-2xl tracking-wide text-sky-400 font-medium capitalize">Who @if($path == 'market-report'){{'Creates'}}@else{{'Performs'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'technology-landscape') {{'Analysis'}}@endif?</span>
                         {{$whoPerforms[$path]}}
                     </div>
                     <div class="grid grid-cols-1 gap-3 h-min">
@@ -301,26 +371,6 @@ mount(function () {
                     <div class="text-white">Patent Valuation</div>
                 </div>
             </a>
-            <a href="/evidence-of-use" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'evidence-of-use') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">Evidence of Use</div>
-                </div>
-            </a>
-            <a href="/patent-valuation" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'patent-valuation') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">Patent Valuation</div>
-                </div>
-            </a>
             <a href="/market-report" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'market-report') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
                 <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
                     <div>
@@ -365,7 +415,6 @@ mount(function () {
                     </div>
                 </div>
                 @endforeach
-
             </div>
         </div>
         <div class="grid grid-cols-1 gap-6 h-min">
@@ -409,45 +458,25 @@ mount(function () {
         <div class="text-lg tracking-widest">{{$additionalInfo[$path]}}</div>
     </div>
     <div class="grid grid-cols-1 gap-8 px-40 py-16">
-        <div class="inline-flex gap-4 pt-12">
-            <div class="flex items-center justify-center w-full h-24 bg-gray-300 rounded">
-                <svg class="w-8 h-8 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                    <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                </svg>
-            </div>
-            <div class="flex items-center justify-center w-full h-24 bg-gray-300 rounded">
-                <svg class="w-8 h-8 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                    <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                </svg>
-            </div>
-            <div class="flex items-center justify-center w-full h-24 bg-gray-300 rounded">
-                <svg class="w-8 h-8 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                    <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                </svg>
-            </div>
-            <div class="flex items-center justify-center w-full h-24 bg-gray-300 rounded">
-                <svg class="w-8 h-8 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                    <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                </svg>
-            </div>
-            <div class="flex items-center justify-center w-full h-24 bg-gray-300 rounded">
-                <svg class="w-8 h-8 text-gray-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                    <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
-                </svg>
+        <div class="flex items-center overflow-x-auto hide-scrollbar">
+            <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
+                @for($i=1; $i<=8; $i++)
+                    <img class="w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}">
+                    @endfor
             </div>
         </div>
     </div>
     <div class="grid grid-cols-1 gap-8 px-40 py-16 text-gray-800">
-        <div class="text-2xl font-semibold capitalize">Why Do {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif with Us?</div>
+        <div class="text-2xl font-semibold capitalize">Why @if($path == 'market-report'){{'Choose our'}}@else{{'Do'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'market-report'){{'s'}}@endif @if($path == 'technology-landscape') Analysis @endif @if($path != 'market-report'){{'with Us'}}@endif?</div>
         <div class="h-min grid grid-cols-1 gap-4 font-semibold">
             @foreach($whyChooseUs[$path] as $heading => $statement)
-            <div class="flex justify-between items-center w-min whitespace-nowrap gap-2">
+            <div class="flex justify-between items-center gap-2">
                 <div>
                     <svg class="w-6 h-6 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
                     </svg>
                 </div>
-                <div class="text-xl text-sky-400 font-semibold">{{$heading}} :</div>
+                <div class="text-xl text-sky-400 font-semibold whitespace-nowrap">{{$heading}} :</div>
                 <div class="text-md w-full items-center font-thin text-gray-800">
                     {{$statement}}
                 </div>

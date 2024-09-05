@@ -20,3 +20,17 @@
     background-color: rgb(34 197 94) !important; /* Change to your desired color */
     color: white; /* Change the text color if needed */
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+/* For Internet Explorer and Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+}
