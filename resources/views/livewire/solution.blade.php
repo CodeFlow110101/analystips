@@ -461,7 +461,7 @@ mount(function () {
         <div class="flex items-center overflow-x-auto hide-scrollbar">
             <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
                 @for($i=1; $i<=8; $i++)
-                    <img class="w-20 sm:w-30 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}">
+                    <img class="w-24 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}">
                     @endfor
             </div>
         </div>
