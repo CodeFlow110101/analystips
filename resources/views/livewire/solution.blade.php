@@ -457,7 +457,7 @@ mount(function () {
         <div class="text-xl sm:text-3xl capitalize">Additional Information About {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</div>
         <div class="text-sm sm:text-lg tracking-widest">{{$additionalInfo[$path]}}</div>
     </div>
-    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-8 sm:py-16">
+    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-12 sm:py-16">
         <div class="flex items-center overflow-x-auto hide-scrollbar">
             <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
                 @for($i=1; $i<=8; $i++)
@@ -467,7 +467,7 @@ mount(function () {
         </div>
     </div>
     <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-10 sm:py-16 text-gray-800">
-        <div class="text-xl sm:text-2xl font-semibold capitalize">Why @if($path == 'market-report'){{'Choose our'}}@else{{'Do'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'market-report'){{'s'}}@endif @if($path == 'technology-landscape') Analysis @endif @if($path != 'market-report'){{'with Us'}}@endif?</div>
+        <div class="text-lg sm:text-2xl font-semibold capitalize">Why @if($path == 'market-report'){{'Choose our'}}@else{{'Do'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'market-report'){{'s'}}@endif @if($path == 'technology-landscape') Analysis @endif @if($path != 'market-report'){{'with Us'}}@endif?</div>
         <div class="h-min grid grid-cols-1 gap-4 font-semibold">
             @foreach($whyChooseUs[$path] as $heading => $statement)
             <div class="flex justify-between items-center gap-2">
@@ -476,7 +476,7 @@ mount(function () {
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
                     </svg>
                 </div>
-                <div class="text-sm sm:text-base md:text-lg lg:text-xl text-sky-400 font-semibold whitespace-nowrap">{{$heading}} :</div>
+                <div class="text-xs sm:text-base md:text-lg lg:text-xl text-sky-400 font-semibold whitespace-nowrap">{{$heading}} :</div>
                 <div class="text-xs sm:text-base md:text-lg lg:text-xl max-sm:tracking-tighter w-full items-center font-thin text-gray-800">
                     {{$statement}}
                 </div>
