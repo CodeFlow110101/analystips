@@ -7,12 +7,12 @@ use function Livewire\Volt\{state};
 ?>
 
 <div @click.away="showMobileDrpDwn=false" x-data="{showMobileDrpDwn: false}" class="xl:fixed max-xl:relative top-0 left-0 w-full bg-white z-10">
-    <div class="flex justify-between items-center py-6 px-2 md:px-4 lg:px-8 xl:px-16">
+    <div class="flex justify-between items-center py-4 sm:py-6 px-4 md:px-4 lg:px-8 xl:px-16">
         <a href="/" wire:navigate class="flex justify-between gap-4 items-center">
             <div>
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-12" alt="Flowbite Logo" />
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 sm:h-12" alt="Flowbite Logo" />
             </div>
-            <div class="text-2xl font-semibold text-gray-600">Gumble</div>
+            <div class="text-lg sm:text-2xl font-semibold text-gray-600">Gumble</div>
         </a>
         <div class="max-xl:hidden flex justify-between gap-10 text-gray-800 font-semibold">
             <a href="/" wire:navigate class="hover:text-sky-400">HOME</a>
@@ -201,13 +201,13 @@ use function Livewire\Volt\{state};
             <a href="/contact-us" wire:navigate class="hover:text-sky-400">CONTACT</a>
         </div>
         <div @click="showMobileDrpDwn=!showMobileDrpDwn" class="xl:hidden border border-sky-400 hover:bg-sky-400 group p-2 rounded-lg">
-            <div x-show="!showMobileDrpDwn" class="h-min grid grid-cols-1 gap-2">
-                <div class="border border-sky-400 group-hover:border-white h-0 w-6"></div>
-                <div class="border border-sky-400 group-hover:border-white h-0 w-6"></div>
-                <div class="border border-sky-400 group-hover:border-white h-0 w-6"></div>
+            <div x-show="!showMobileDrpDwn" class="h-min grid grid-cols-1 gap-1">
+                <div class="border border-sky-400 group-hover:border-white h-0 w-4"></div>
+                <div class="border border-sky-400 group-hover:border-white h-0 w-4"></div>
+                <div class="border border-sky-400 group-hover:border-white h-0 w-4"></div>
             </div>
             <div x-show="showMobileDrpDwn">
-                <svg class="w-6 h-6 text-sky-400 group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <svg class="w-4 h-4 text-sky-400 group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
                 </svg>
             </div>
