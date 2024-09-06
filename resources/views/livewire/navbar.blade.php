@@ -7,7 +7,7 @@ use function Livewire\Volt\{state};
 ?>
 
 <div @click.away="showMobileDrpDwn=false" x-data="{showMobileDrpDwn: false}" class="xl:fixed max-xl:relative top-0 left-0 w-full bg-white z-10">
-    <div class="flex justify-between items-center py-4 sm:py-6 px-4 md:px-4 lg:px-8 xl:px-16">
+    <div class="flex justify-between items-center py-6 sm:py-6 px-4 md:px-4 lg:px-8 xl:px-16">
         <a href="/" wire:navigate class="flex justify-between gap-4 items-center">
             <div>
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 sm:h-12" alt="Flowbite Logo" />
