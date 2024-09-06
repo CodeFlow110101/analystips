@@ -10,9 +10,9 @@ use function Livewire\Volt\{state};
     <div class="flex justify-between items-center py-4 sm:py-6 px-4 md:px-4 lg:px-8 xl:px-16">
         <a href="/" wire:navigate class="flex justify-between gap-4 items-center">
             <div>
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 sm:h-12" alt="Flowbite Logo" />
+                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 sm:h-12" alt="Flowbite Logo" />
             </div>
-            <div class="text-lg sm:text-2xl font-semibold text-gray-600">Gumble</div>
+            <div class="text-xl sm:text-2xl font-semibold text-gray-600">Gumble</div>
         </a>
         <div class="max-xl:hidden flex justify-between gap-10 text-gray-800 font-semibold">
             <a href="/" wire:navigate class="hover:text-sky-400">HOME</a>
@@ -213,7 +213,7 @@ use function Livewire\Volt\{state};
             </div>
         </div>
     </div>
-    <div :class="showMobileDrpDwn?'scale-y-100':'scale-y-0'" class="absolute transition-transform duration-200 origin-top top-20 bg-white py-2 w-full px-2 xl:hidden h-min grid grid-cols-1 gap-2">
+    <div :class="showMobileDrpDwn?'scale-y-100':'scale-y-0'" class="absolute transition-transform duration-200 origin-top top-16 bg-white py-2 w-full px-2 xl:hidden h-min grid grid-cols-1 gap-2">
         <a href="/" wire:navigate>
             <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 text-sm text-center rounded-lg">Home</div>
         </a>
