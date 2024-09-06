@@ -237,25 +237,25 @@ use function Livewire\Volt\{state};
                 <a href="/technology-scouting" wire:navigate>
                     <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 rounded-lg">Technology Scouting</div>
                 </a>
-                <a href="/terms-and-conditions" wire:navigate>
+                <a href="/white-space-analysis" wire:navigate>
                     <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 rounded-lg">White Space Analysis</div>
                 </a>
-                <a href="/white-space-analysis" wire:navigate>
+                <a href="/technology-landscape" wire:navigate>
                     <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 rounded-lg">Technology Landscape</div>
                 </a>
-                <a href="/technology-landscape" wire:navigate>
+                <a href="/invalidity-contentions" wire:navigate>
                     <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 rounded-lg">Invalidity Contentions</div>
                 </a>
-                <a href="/invalidity-contentions" wire:navigate>
+                <a href="/state-of-the-art-search" wire:navigate>
                     <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 rounded-lg">State of Art Search</div>
                 </a>
-                <a href="/state-of-the-art-search" wire:navigate>
+                <a href="/patent-valuation" wire:navigate>
                     <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 rounded-lg">Patent Valuation</div>
                 </a>
-                <a href="/patent-valuation" wire:navigate>
+                <a href="/market-report" wire:navigate>
                     <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 rounded-lg">Market Report</div>
                 </a>
-                <a href="/market-report" wire:navigate>
+                <a href="/competitive-analysis" wire:navigate>
                     <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 rounded-lg">Competitive Analysis</div>
                 </a>
             </div>
