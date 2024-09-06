@@ -14,7 +14,7 @@ use function Livewire\Volt\{state};
                     <div class="text-white text-lg tracking-wider">About Us</div>
                     <div class="border-2 rounded-full border-sky-400 w-12 h-0"></div>
                 </div>
-                <div class="text-sm leading-6 font-light text-gray-400">Patrisen is established with the group of experienced attorneys with the vision to the provide best patent search reports preparation, assisting clients globally for their Research & Innovation, Infringement Analysis and commercialization of the paten.</div>
+                <div class="text-sm leading-6 font-light text-gray-400">Patrisen was founded by a team of experienced patent attorneys with a shared vision of providing unparalleled services in patent research and report preparation. Recognizing the need for a specialized platform that delivers high-quality patent search services, Patrisen was established to support Research & Development, Infringement Analysis, and Commercialization efforts for clients across the globe.</div>
             </div>
             <div class="max-xl:hidden grid grid-cols-1 gap-4 h-min">
                 <div class="grid grid-cols-1 gap-4 h-min">
