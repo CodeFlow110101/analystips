@@ -213,7 +213,7 @@ use function Livewire\Volt\{state};
             </div>
         </div>
     </div>
-    <div :class="showMobileDrpDwn?'scale-y-100':'scale-y-0'" class="absolute transition-transform duration-200 origin-top top-16 bg-white py-2 w-full px-2 xl:hidden h-min grid grid-cols-1 gap-2">
+    <div :class="showMobileDrpDwn?'scale-y-100':'scale-y-0'" class="absolute transition-transform duration-200 origin-top top-20 bg-white py-2 w-full px-2 xl:hidden h-min grid grid-cols-1 gap-2">
         <a href="/" wire:navigate>
             <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 text-sm text-center rounded-lg">Home</div>
         </a>
