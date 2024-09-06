@@ -271,46 +271,46 @@ mount(function () {
 ?>
 
 <div>
-    <div class="h-96 mt-24 uppercase text-white text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/'.$bgImage[$path]) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/'.$bgImage[$path]) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         {{str_replace('-',' ',$path)}}
     </div>
-    <div class=" px-40 py-20 flex justify-between gap-4">
-        <div class="w-4/5 grid grid-cols-1 gap-12 h-min pr-32">
-            <div class="capitalize text-3xl tracking-wide text-sky-400 font-medium">{{str_replace('-',' ',$path)}}</div>
+    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-12 sm:py-20 xl:flex xl:justify-between xl:gap-4">
+        <div class="xl:w-4/5 grid grid-cols-1 gap-6 sm:gap-12 h-min xl:pr-32">
+            <div class="capitalize text-xl sm:text-3xl tracking-wide text-sky-400 font-medium">{{str_replace('-',' ',$path)}}</div>
             <div class="grid grid-cols-1 gap-4 h-min">
                 <div class="grid grid-cols-1 gap-10 h-min">
                     <div class="grid grid-cols-1 gap-6 h-min">
                         @foreach($description[$path] as $paragraphs)
-                        <div class="text-sm leading-2 font-normal text-gray-800 text-justify">
+                        <div class="text-xs sm:text-sm leading-2 font-normal text-gray-800 text-justify">
                             {{$paragraphs}}
                         </div>
                         @endforeach
                     </div>
 
-                    <div class="text-sm leading-2 font-normal text-gray-800 text-justify">
-                        <span class="text-2xl tracking-wide text-sky-400 font-medium capitalize">Who @if($path == 'market-report'){{'Creates'}}@else{{'Performs'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'technology-landscape') {{'Analysis'}}@endif?</span>
+                    <div class="text-xs sm:text-sm leading-2 font-normal text-gray-800 text-justify">
+                        <span class="text-lg sm:text-2xl tracking-wide text-sky-400 font-medium capitalize">Who @if($path == 'market-report'){{'Creates'}}@else{{'Performs'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'technology-landscape') {{'Analysis'}}@endif?</span>
                         {{$whoPerforms[$path]}}
                     </div>
                     <div class="grid grid-cols-1 gap-3 h-min">
-                        <div class="text-2xl tracking-wide text-sky-400 font-medium capitalize">
+                        <div class="text-lg sm:text-2xl tracking-wide text-sky-400 font-medium capitalize">
                             Benefits of {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif
                         </div>
                         <div class="grid grid-cols-1 gap-6 h-min text-sm font-normal text-gray-800">
                             @foreach($benefits[$path] as $heading => $statement)
-                            <div>
-                                <span class="tracking-wide text-sky-400 font-medium">{{$loop->iteration}}) {{$heading}}: </span>{{$statement}}
+                            <div class="max-sm:text-xs">
+                                <span class="tracking-wide text-sky-400 text-base font-medium">{{$loop->iteration}}) {{$heading}}: </span>{{$statement}}
                             </div>
                             @endforeach
                         </div>
                     </div>
-                    <div class="text-sm leading-2 font-normal text-gray-800 text-justify">
-                        <span class="text-2xl tracking-wide text-sky-400 font-medium capitalize">Purpose of {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</span>
+                    <div class="text-xs sm:text-sm leading-2 font-normal text-gray-800 text-justify">
+                        <span class="text-lg sm:text-2xl sm:tracking-wide text-sky-400 font-medium capitalize">Purpose of {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</span>
                         {{$purpose[$path]}}
                     </div>
                 </div>
             </div>
         </div>
-        <div class="w-1/5 h-min grid grid-cols-1 gap-2 font-medium">
+        <div class="max-xl:hidden w-1/5 h-min grid grid-cols-1 gap-2 font-medium">
             <a href="/technology-scouting" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'technology-scouting') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
                 <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
                     <div>
@@ -393,24 +393,24 @@ mount(function () {
             </a>
         </div>
     </div>
-    <div class="grid grid-cols-2 gap-8 px-40 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-12 sm:py-20">
         <div class="grid grid-cols-1 gap-6 h-min">
-            <div class="text-gray-600 uppercase font-bold text-lg">What We Can Do for You?</div>
+            <div class="text-gray-600 uppercase font-bold text-base sm:text-lg">What We Can Do for You?</div>
             <div class="grid grid-cols-1 gap-8">
                 @foreach($whatWeDo[$path] as $heading => $statement)
                 <div x-data="{showDropdown : false}">
                     <div class="flex justify-between gap-4">
                         <div @click="showDropdown = !showDropdown" :class="showDropdown ? 'bg-sky-400' : 'bg-gray-400'" class="w-min h-min rounded-full p-2 cursor-pointer">
-                            <svg x-show="!showDropdown" class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <svg x-show="!showDropdown" class="w-3 sm:w-6 h-3 sm:h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />
                             </svg>
-                            <svg x-show="showDropdown" class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <svg x-show="showDropdown" class="w-3 sm:w-6 h-3 sm:h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
                             </svg>
                         </div>
-                        <div class="text-md w-full items-center font-thin text-gray-800 grid grid-cols-1 gap-4">
-                            <div class="text-xl text-sky-400 font-semibold">{{$heading}}</div>
-                            <div x-show="showDropdown">{{$statement}}</div>
+                        <div class="text-md w-full items-center font-thin text-gray-800 grid grid-cols-1 gap-1 sm:gap-4">
+                            <div class="text-base sm:text-xl text-sky-400 font-semibold">{{$heading}}</div>
+                            <div x-show="showDropdown" class="max-sm:text-xs">{{$statement}}</div>
                         </div>
                     </div>
                 </div>
@@ -453,21 +453,21 @@ mount(function () {
             </div>
         </div>
     </div>
-    <div class="px-40 py-28 bg-sky-400 grid grid-cols-1 gap-4 text-center text-white font-thin">
-        <div class="text-3xl capitalize">Additional Information About {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</div>
-        <div class="text-lg tracking-widest">{{$additionalInfo[$path]}}</div>
+    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-14 sm:py-28 bg-sky-400 grid grid-cols-1 gap-4 text-center text-white font-thin">
+        <div class="text-xl sm:text-3xl capitalize">Additional Information About {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</div>
+        <div class="text-sm sm:text-lg tracking-widest">{{$additionalInfo[$path]}}</div>
     </div>
-    <div class="grid grid-cols-1 gap-8 px-40 py-16">
+    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-8 sm:py-16">
         <div class="flex items-center overflow-x-auto hide-scrollbar">
             <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
                 @for($i=1; $i<=8; $i++)
-                    <img class="w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}">
+                    <img class="w-20 sm:w-30 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}">
                     @endfor
             </div>
         </div>
     </div>
-    <div class="grid grid-cols-1 gap-8 px-40 py-16 text-gray-800">
-        <div class="text-2xl font-semibold capitalize">Why @if($path == 'market-report'){{'Choose our'}}@else{{'Do'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'market-report'){{'s'}}@endif @if($path == 'technology-landscape') Analysis @endif @if($path != 'market-report'){{'with Us'}}@endif?</div>
+    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-10 sm:py-16 text-gray-800">
+        <div class="text-xl sm:text-2xl font-semibold capitalize">Why @if($path == 'market-report'){{'Choose our'}}@else{{'Do'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'market-report'){{'s'}}@endif @if($path == 'technology-landscape') Analysis @endif @if($path != 'market-report'){{'with Us'}}@endif?</div>
         <div class="h-min grid grid-cols-1 gap-4 font-semibold">
             @foreach($whyChooseUs[$path] as $heading => $statement)
             <div class="flex justify-between items-center gap-2">
@@ -476,8 +476,8 @@ mount(function () {
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
                     </svg>
                 </div>
-                <div class="text-xl text-sky-400 font-semibold whitespace-nowrap">{{$heading}} :</div>
-                <div class="text-md w-full items-center font-thin text-gray-800">
+                <div class="text-sm sm:text-base md:text-lg lg:text-xl text-sky-400 font-semibold whitespace-nowrap">{{$heading}} :</div>
+                <div class="text-xs sm:text-base md:text-lg lg:text-xl max-sm:tracking-tighter w-full items-center font-thin text-gray-800">
                     {{$statement}}
                 </div>
             </div>
