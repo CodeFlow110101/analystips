@@ -206,14 +206,14 @@ use function Livewire\Volt\{state};
                 <div class="border border-sky-400 group-hover:border-white h-0 w-4"></div>
                 <div class="border border-sky-400 group-hover:border-white h-0 w-4"></div>
             </div>
-            <div x-show="showMobileDrpDwn">
+            <div x-cloak x-show="showMobileDrpDwn">
                 <svg class="w-4 h-4 text-sky-400 group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
                 </svg>
             </div>
         </div>
     </div>
-    <div :class="showMobileDrpDwn?'scale-y-100':'scale-y-0'" class="absolute transition-transform duration-200 origin-top top-20 bg-white py-2 w-full px-2 xl:hidden h-min grid grid-cols-1 gap-2">
+    <div x-cloak :class="showMobileDrpDwn?'scale-y-100':'scale-y-0'" class="absolute transition-transform duration-200 origin-top top-20 bg-white py-2 w-full px-2 xl:hidden h-min grid grid-cols-1 gap-2">
         <a href="/" wire:navigate>
             <div class="border transition-colors hover:bg-sky-400 duration-500 hover:text-white border-sky-400 p-2 text-sm text-center rounded-lg">Home</div>
         </a>
