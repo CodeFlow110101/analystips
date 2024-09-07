@@ -12,7 +12,7 @@ state(['search', 'id']);
 with(fn() => [
     'blogs' => Blog::where('title', 'like', '%' . $this->search . '%')->when($this->id, function ($query) {
         return $query->where('id', $this->id);
-    })->orderBy('created_at', 'desc')->paginate(3),
+    })->orderBy('created_at', 'desc')->simplePaginate(3),
     'recent_blogs' => Blog::orderBy('created_at', 'desc')->get()->take(5)
 ]);
 
@@ -25,11 +25,11 @@ mount(function ($id) {
 ?>
 
 <div>
-    <div class="h-96 bg-gray-800 pt-24 uppercase text-white text-4xl font-light tracking-wide flex justify-center items-center">
-        Blogs
+    <div class="h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        News & Blogs
     </div>
-    <div class="flex justify-between gap-4 px-48 py-20">
-        <div class="w-4/5 h-min grid grid-cols-1 gap-8">
+    <div class="lg:flex lg:justify-between lg:gap-4 px-4 md:px-12 lg:px-20 xl:px-40 py-20">
+        <div class="lg:w-4/5 h-min grid grid-cols-1 gap-12 sm:gap-8">
             @foreach($blogs as $blog)
             <div wire:key="{{$blog->id}}" class="h-min grid grid-cols-1 gap-4 text-gray-800 font-semibold">
                 <div class="flex justify-center">
@@ -54,9 +54,11 @@ mount(function ($id) {
                 @endif
             </div>
             @endforeach
-            {{ $blogs->links() }}
+            <div class="py-12">
+                {{ $blogs->links() }}
+            </div>
         </div>
-        <div class="w-1/5 h-min grid grid-cols-1 gap-4">
+        <div class="lg:w-1/5 h-min grid grid-cols-1 gap-4">
             <div>
                 <input wire:model.live="search" class="border border-gray-500 focus:border-sky-400 transition-colors duration-200 w-full px-4 py-2 outline-none" placeholder="Search">
             </div>

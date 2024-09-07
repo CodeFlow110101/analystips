@@ -24,7 +24,7 @@ use function Livewire\Volt\{state};
                 <div class="text-sm font-light text-gray-200 grid grid-cols-1 gap-2">
                     <a href="/" wire:navigate class="hover:text-sky-400 cursor-pointer">Home</a>
                     <a href="/practice-domain" wire:navigate class="hover:text-sky-400 cursor-pointer">Practice Domain</a>
-                    <a href="/blog" wire:navigate class="hover:text-sky-400 cursor-pointer">Blogs</a>
+                    <a href="/blog" wire:navigate class="hover:text-sky-400 cursor-pointer">News & Blogs</a>
                     <a href="/news" wire:navigate class="hover:text-sky-400 cursor-pointer">News</a>
                     <a href="/career" wire:navigate class="hover:text-sky-400 cursor-pointer">Career</a>
                     <a href="/contact-us" wire:navigate class="hover:text-sky-400 cursor-pointer">Contact</a>

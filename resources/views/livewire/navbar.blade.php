@@ -12,7 +12,7 @@ use function Livewire\Volt\{state};
             <div>
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 sm:h-12" alt="Flowbite Logo" />
             </div>
-            <div class="text-xl sm:text-2xl font-semibold text-gray-600">Gumble</div>
+            <div class="text-xl sm:text-2xl font-semibold text-gray-600">Patrisen</div>
         </a>
         <div class="max-xl:hidden flex justify-between gap-10 text-gray-800 font-semibold">
             <a href="/" wire:navigate class="hover:text-sky-400">HOME</a>
