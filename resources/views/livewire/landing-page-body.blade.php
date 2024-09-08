@@ -252,95 +252,103 @@ mount(function () {
         </div>
     </div>
 
-    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-20 flex justify-center">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
-            <div class="grid grid-cols-1 group gap-6 text-center">
-                <div class="flex justify-center items-center">
-                    <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
-                        <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                            <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-width="1" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-gray-500 font-normal uppercase">Initial Consultation and Assessment</div>
+
+    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-20 h-min grid grid-cols-1 gap-10">
+        <div class="grid grid-cols-1 gap-4 h-min">
+            <div class="text-2xl font-semibold uppercase text-gray-800 text-center">Our Process</div>
+            <div class="flex justify-center">
+                <div class="border-2 rounded-full h-min w-20 border-sky-400"></div>
             </div>
-            <div class="grid grid-cols-1 group gap-6 text-center">
-                <div class="flex justify-center items-center">
-                    <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
-                        <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                            <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207" />
-                            </svg>
+        </div>
+        <div class="flex justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+                <div class="grid grid-cols-1 group gap-6 text-center">
+                    <div class="flex justify-center items-center">
+                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
+                            <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
+                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-width="1" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
+                    <div class="text-gray-500 font-normal uppercase">Initial Consultation and Assessment</div>
                 </div>
-                <div class="text-gray-500 font-normal uppercase">Scope Definition and Strategy Development</div>
-            </div>
-            <div class="grid grid-cols-1 group gap-6 text-center">
-                <div class="flex justify-center items-center">
-                    <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
-                        <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                            <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z" />
-                            </svg>
+                <div class="grid grid-cols-1 group gap-6 text-center">
+                    <div class="flex justify-center items-center">
+                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
+                            <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
+                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
+                    <div class="text-gray-500 font-normal uppercase">Scope Definition and Strategy Development</div>
                 </div>
-                <div class="text-gray-500 font-normal uppercase">Report Preparation</div>
-            </div>
-            <div class="grid grid-cols-1 group gap-6 text-center">
-                <div class="flex justify-center items-center">
-                    <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
-                        <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                            <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.079 6.839a3 3 0 0 0-4.255.1M13 20h1.083A3.916 3.916 0 0 0 18 16.083V9A6 6 0 1 0 6 9v7m7 4v-1a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1Zm-7-4v-6H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1Zm12-6h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v-6Z" />
-                            </svg>
+                <div class="grid grid-cols-1 group gap-6 text-center">
+                    <div class="flex justify-center items-center">
+                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
+                            <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
+                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
+                    <div class="text-gray-500 font-normal uppercase">Report Preparation</div>
                 </div>
-                <div class="text-gray-500 font-normal uppercase">Client Review and Feedback</div>
-            </div>
-            <div class="grid grid-cols-1 group gap-6 text-center">
-                <div class="flex justify-center items-center">
-                    <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
-                        <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                            <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-3 5h3m-6 0h.01M12 16h3m-6 0h.01M10 3v4h4V3h-4Z" />
-                            </svg>
+                <div class="grid grid-cols-1 group gap-6 text-center">
+                    <div class="flex justify-center items-center">
+                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
+                            <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
+                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.079 6.839a3 3 0 0 0-4.255.1M13 20h1.083A3.916 3.916 0 0 0 18 16.083V9A6 6 0 1 0 6 9v7m7 4v-1a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1Zm-7-4v-6H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1Zm12-6h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v-6Z" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
+                    <div class="text-gray-500 font-normal uppercase">Client Review and Feedback</div>
                 </div>
-                <div class="text-gray-500 font-normal uppercase">Revisions and Finalization</div>
-            </div>
-            <div class="grid grid-cols-1 group gap-6 text-center">
-                <div class="flex justify-center items-center">
-                    <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
-                        <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                            <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
-                            </svg>
+                <div class="grid grid-cols-1 group gap-6 text-center">
+                    <div class="flex justify-center items-center">
+                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
+                            <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
+                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-3 5h3m-6 0h.01M12 16h3m-6 0h.01M10 3v4h4V3h-4Z" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
+                    <div class="text-gray-500 font-normal uppercase">Revisions and Finalization</div>
                 </div>
-                <div class="text-gray-500 font-normal uppercase">Delivery and Ongoing Support</div>
-            </div>
-            <div class="grid grid-cols-1 group gap-6 text-center">
-                <div class="flex justify-center items-center">
-                    <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
-                        <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                            <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 15v5m-3 0h6M4 11h16M5 15h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1Z" />
-                            </svg>
+                <div class="grid grid-cols-1 group gap-6 text-center">
+                    <div class="flex justify-center items-center">
+                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
+                            <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
+                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
+                    <div class="text-gray-500 font-normal uppercase">Delivery and Ongoing Support</div>
                 </div>
-                <div class="text-gray-500 font-normal uppercase">Continuous Monitoring and Updates</div>
+                <div class="grid grid-cols-1 group gap-6 text-center">
+                    <div class="flex justify-center items-center">
+                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-sky-400">
+                            <div class="bg-gradient-to-tr from-sky-400 to-sky-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
+                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 15v5m-3 0h6M4 11h16M5 15h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-gray-500 font-normal uppercase">Continuous Monitoring and Updates</div>
+                </div>
             </div>
         </div>
     </div>
-
     <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-20 flex justify-center">
         <div class="grid grid-cols-1 text-center gap-4">
             <div class="text-sm text-black font-semibold uppercase">Our clients</div>
@@ -362,7 +370,6 @@ mount(function () {
     </div>
 
     <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-20 grid grid-cols-1 gap-4">
-        <div class="text-sky-400 text-center uppercase">accusam et justo duo dolores et ea rebum. Stet clita no sea</div>
         <div class="font-bold text-2xl text-gray-800 tracking-wider text-center uppercase">Latest news from blog</div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
             @foreach($blogs as $blog)
