@@ -20,48 +20,50 @@ $sendMail = function () {
 ?>
 
 <div>
-    <div class="h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/pexels-thisisengineering-3913031.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        Contact Us
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-black/50 flex justify-center items-center">Contact Us</div>
     </div>
-    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-20">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 p-8 text-white" style="background-image: url('{{ asset('images/pexels-lusaya-401107.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-            <div class="flex justify-between items-center gap-4">
-                <div>
-                    <svg class="w-14 h-14 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
-                    </svg>
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20">
+        <div class="text-white" style="background-image: url('{{ asset('images/pexels-lusaya-401107.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 p-8 bg-black/70">
+                <div class="flex justify-between items-center gap-4">
+                    <div>
+                        <svg class="w-14 h-14 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z" />
+                        </svg>
+                    </div>
+                    <div class="grid grid-cols-1 gap-3 h-min w-full">
+                        <div class="sm:text-lg font-semibold uppercase">Address</div>
+                        <div class="text-xs sm:text-sm leading-tight">R&D Department Address : 7901 4th ST N, STE 300, ST. Petersburg FL33702, United States of America</div>
+                        <div class="text-xs sm:text-sm leading-tight">Marketing Division Address.: BO1-A-09,Menara2 KL Eco City, 3jln Bangsar, 59200 Kuala Lumpur WP Malaysia</div>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 gap-3 h-min w-full">
-                    <div class="sm:text-lg font-semibold uppercase">Address</div>
-                    <div class="text-xs sm:text-sm leading-tight">R&D Department Address : 7901 4th ST N, STE 300, ST. Petersburg FL33702, United States of America</div>
-                    <div class="text-xs sm:text-sm leading-tight">Marketing Division Address.: BO1-A-09,Menara2 KL Eco City, 3jln Bangsar, 59200 Kuala Lumpur WP Malaysia</div>
+                <div class="flex justify-between items-center gap-4 w-min whitespace-nowrap">
+                    <div>
+                        <svg class="w-14 h-14 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 15h12M6 6h12m-6 12h.01M7 21h10a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1Z" />
+                        </svg>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2 h-min">
+                        <div class="sm:text-lg font-semibold uppercase">PHONE</div>
+                        <div class="">+1 307 241 4465</div>
+                    </div>
                 </div>
-            </div>
-            <div class="flex justify-between items-center gap-4 w-min whitespace-nowrap">
-                <div>
-                    <svg class="w-14 h-14 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 15h12M6 6h12m-6 12h.01M7 21h10a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1Z" />
-                    </svg>
-                </div>
-                <div class="grid grid-cols-1 gap-2 h-min">
-                    <div class="sm:text-lg font-semibold uppercase">PHONE</div>
-                    <div class="">+1 307 241 4465</div>
-                </div>
-            </div>
-            <div class="flex justify-between items-center gap-4 w-min whitespace-nowrap">
-                <div>
-                    <svg class="w-14 h-14 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-width="1" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
-                    </svg>
-                </div>
-                <div class="grid grid-cols-1 gap-2 h-min">
-                    <div class="text-base sm:text-lg font-semibold uppercase">EMAIL</div>
-                    <div class="">info@patrisen.com</div>
+                <div class="flex justify-between items-center gap-4 w-min whitespace-nowrap">
+                    <div>
+                        <svg class="w-14 h-14 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="1" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z" />
+                        </svg>
+                    </div>
+                    <div class="grid grid-cols-1 gap-2 h-min">
+                        <div class="text-base sm:text-lg font-semibold uppercase">EMAIL</div>
+                        <div class="">info@patrisen.com</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="py-20 px-4 md:px-12 lg:px-20 xl:px-40 grid grid-cols-1 gap-2 h-min text-center">
+        <div class="py-20 px-4 md:px-12 lg:px-20 xl:px-28 grid grid-cols-1 gap-2 h-min text-center">
             <div class="font-semibold">let's work together</div>
             <div class="text-2xl sm:text-4xl transition-colors duration-500 font-medium hover:text-sky-400">SEND US A MESSAGE</div>
             <div class="text-sm sm:text-xl font-medium text-gray-600">It would be great to hear from you! If you have any question, please do not hesitate to send us a message. We are looking forward to hearing from you!</div>

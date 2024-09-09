@@ -14,4 +14,12 @@ class FileUploads extends Controller
 
         return ['imageName' => $imageName, 'imagePath' => $imagePath];
     }
+
+    function storeFile(Request $request)
+    {
+        $fileName = (string)Str::uuid() . $request->file('file')->getClientOriginalName();
+        $filePath =  $request->file('file')->storeAs('resumefiles', $fileName, 'public');
+
+        return ['fileName' => $fileName, 'filePath' => $filePath];
+    }
 }

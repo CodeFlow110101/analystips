@@ -271,10 +271,10 @@ mount(function () {
 ?>
 
 <div>
-    <div class="h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/'.$bgImage[$path]) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        {{str_replace('-',' ',$path)}}
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/'.$bgImage[$path]) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-black/50 flex justify-center items-center">{{str_replace('-',' ',$path)}}</div>
     </div>
-    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-12 sm:py-20 xl:flex xl:justify-between xl:gap-4">
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-20 xl:flex xl:justify-between xl:gap-4">
         <div class="xl:w-4/5 grid grid-cols-1 gap-6 sm:gap-12 h-min xl:pr-32">
             <div class="capitalize text-xl sm:text-3xl tracking-wide text-sky-400 font-medium">{{str_replace('-',' ',$path)}}</div>
             <div class="grid grid-cols-1 gap-4 h-min">
@@ -310,90 +310,28 @@ mount(function () {
                 </div>
             </div>
         </div>
-        <div class="max-xl:hidden w-1/5 h-min grid grid-cols-1 gap-2 font-medium">
-            <a href="/technology-scouting" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'technology-scouting') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
+        <div class="max-xl:hidden w-1/5 h-min grid grid-cols-1 gap-8">
+            <div class="h-min grid grid-cols-1 gap-2">
+                <div class="text-2xl font-medium text-gray-800">Our Services</div>
+                <div class="border-2 border-sky-400 h-0 w-10/12"></div>
+            </div>
+            <div class="h-min grid grid-cols-1 gap-2 font-medium">
+                @foreach($bgImage as $key => $value)
+                <a href="/{{$key}}" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 group shadow-md shadow-black/50 @if($path == $key) bg-sky-400 @else hover:bg-sky-400 bg-white text-gray-800 @endif">
+                    <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
+                        <div>
+                            <svg class="w-3 h-3  @if($path == $key) text-white @else group-hover:text-white text-gray-800 @endif" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
+                            </svg>
+                        </div>
+                        <div class="@if($path == $key) text-white @else group-hover:text-white text-gray-800 @endif"> {{str_replace('-',' ',$key)}}</div>
                     </div>
-                    <div class="text-white">Technology Scouting</div>
-                </div>
-            </a>
-            <a href="/white-space-analysis" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'white-space-analysis') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">White Space Analysis</div>
-                </div>
-            </a>
-            <a href="/technology-landscape" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'technology-landscape') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">Technology Landscape</div>
-                </div>
-            </a>
-            <a href="/invalidity-contentions" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'invalidity-contentions') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">Invalidity Contentions</div>
-                </div>
-            </a>
-            <a href="/state-of-the-art-search" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'state-of-the-art-search') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">State of the Art Search</div>
-                </div>
-            </a>
-            <a href="/patent-valuation" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'patent-valuation') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">Patent Valuation</div>
-                </div>
-            </a>
-            <a href="/market-report" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'market-report') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">Market Report</div>
-                </div>
-            </a>
-            <a href="/competitive-analysis" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 @if($path == 'competitive-analysis') bg-sky-400 @else hover:bg-sky-400 bg-slate-700 @endif">
-                <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
-                    <div>
-                        <svg class="w-3 h-3 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
-                        </svg>
-                    </div>
-                    <div class="text-white">Competitive Analysis</div>
-                </div>
-            </a>
+                </a>
+                @endforeach
+            </div>
         </div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-12 sm:py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-20">
         <div class="grid grid-cols-1 gap-6 h-min">
             <div class="text-gray-600 uppercase font-bold text-base sm:text-lg">What We Can Do for You?</div>
             <div class="grid grid-cols-1 gap-8">
@@ -453,11 +391,11 @@ mount(function () {
             </div>
         </div>
     </div>
-    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-14 sm:py-28 bg-sky-400 grid grid-cols-1 gap-4 text-center text-white font-thin">
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-14 sm:py-28 bg-sky-400 grid grid-cols-1 gap-4 text-center text-white font-thin">
         <div class="text-xl sm:text-3xl capitalize">Additional Information About {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</div>
         <div class="text-sm sm:text-lg tracking-widest">{{$additionalInfo[$path]}}</div>
     </div>
-    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-12 sm:py-16">
+    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-16">
         <div class="flex items-center overflow-x-auto hide-scrollbar">
             <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
                 @for($i=1; $i<=8; $i++)
@@ -466,11 +404,11 @@ mount(function () {
             </div>
         </div>
     </div>
-    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-10 sm:py-16 text-gray-800">
+    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16 text-gray-800">
         <div class="text-lg sm:text-2xl font-semibold capitalize">Why @if($path == 'market-report'){{'Choose our'}}@else{{'Do'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'market-report'){{'s'}}@endif @if($path == 'technology-landscape') Analysis @endif @if($path != 'market-report'){{'with Us'}}@endif?</div>
         <div class="h-min grid grid-cols-1 gap-4 font-semibold">
             @foreach($whyChooseUs[$path] as $heading => $statement)
-            <div class="flex justify-between items-center gap-2">
+            <div class="flex justify-between items-start gap-2">
                 <div>
                     <svg class="w-6 h-6 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />

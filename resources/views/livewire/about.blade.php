@@ -7,10 +7,10 @@ use function Livewire\Volt\{state};
 ?>
 
 <div>
-    <div class="h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        About us
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-black/50 flex justify-center items-center">About us</div>
     </div>
-    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-28 grid grid-cols-1 gap-36">
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-28 grid grid-cols-1 gap-36">
         <div class="grid grid-cols-1 xl:grid-cols-2 gap-12 h-min">
             <div>
                 <img src="{{ asset('images/pexels-thisisengineering-3913031.jpg') }}">
@@ -114,7 +114,7 @@ use function Livewire\Volt\{state};
             </div>
         </div>
     </div>
-    <div class="px-4 md:px-12 lg:px-20 xl:px-40 py-28 grid grid-cols-1 gap-28">
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-28 grid grid-cols-1 gap-28">
         <div class="grid grid-cols-1 gap-1 text-center">
             <div class="sm:text-xl font-semibold text-gray-700">Technical Domain</div>
             <div class="text-2xl sm:text-4xl font-semibold text-gray-700">Our Specilization</div>
@@ -237,8 +237,8 @@ use function Livewire\Volt\{state};
             <div class="flex justify-center">
                 <div class="border-2 rounded-full h-min w-20 border-sky-400"></div>
             </div>
-            <div class="text-base sm:text-xl px-4 md:px-12 lg:px-20 xl:px-40 text-gray-500">Our Company is a trusted service provider of high quality Patent search, commited for transparency, ethics and work on client satisfaction.</div>
-            <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-40 py-12 sm:py-16">
+            <div class="text-base sm:text-xl px-4 md:px-12 lg:px-20 xl:px-28 text-gray-500">Our Company is a trusted service provider of high quality Patent search, commited for transparency, ethics and work on client satisfaction.</div>
+            <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-16">
                 <div class="flex items-center overflow-x-auto hide-scrollbar">
                     <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
                         @for($i=1; $i<=8; $i++)

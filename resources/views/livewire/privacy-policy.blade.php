@@ -7,10 +7,10 @@ use function Livewire\Volt\{state};
 ?>
 
 <div>
-    <div class="h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/pexels-mohammad-danish-290641-891059.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        Privacy Policy
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-black/50 flex justify-center items-center">Privacy Policy</div>
     </div>
-    <div class="grid grid-cols-1 gap-12 h-min px-4 md:px-12 lg:px-20 xl:px-40 py-20">
+    <div class="grid grid-cols-1 gap-12 h-min px-4 md:px-12 lg:px-20 xl:px-28 py-20">
         <div class="grid grid-cols-1 gap-3">
             <div class="text-sky-400 text-base sm:text-xl font-semibold">1. Introduction</div>
             <div class="text-xs sm:text-sm font-normal text-gray-800">This Privacy Policy outlines the policies and procedures concerning the collection, use, and disclosure of your information when you utilize our Service. It also informs you about your privacy rights and the legal protections afforded to you.</div>

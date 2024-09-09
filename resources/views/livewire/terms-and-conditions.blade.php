@@ -6,10 +6,10 @@ use function Livewire\Volt\{state};
 ?>
 
 <div>
-    <div class="h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        Terms And Conditions
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-black/50 flex justify-center items-center">Terms And Conditions</div>
     </div>
-    <div class="grid grid-cols-1 gap-12 h-min px-4 md:px-12 lg:px-20 xl:px-40 py-20">
+    <div class="grid grid-cols-1 gap-12 h-min px-4 md:px-12 lg:px-20 xl:px-28 py-20">
         <div class="grid grid-cols-1 gap-2">
             <div class="text-sky-400 text-base sm:text-xl font-semibold">1. Terms of Use, Disclaimer & and Conditions of Use</div>
             <div class="text-sm font-normal text-gray-800">By accessing Patrisen LLC's website, you confirm that you have carefully read the subsequent terms and conditions and consent to abide by them. If you do not consent to all of these terms and conditions, you have the option to refrain from using the website. We reserve the right to modify these Terms of Use at any time without prior notice. Any alterations to the Terms of Use will be openly disclosed, and we will promptly publish them on this page.</div>

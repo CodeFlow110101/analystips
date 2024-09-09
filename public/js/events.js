@@ -51,40 +51,39 @@ document.addEventListener("livewire:init", () => {
     });
   });
 
-  Livewire.on("upload-pdf", event => {
+  Livewire.on("upload-file", event => {
     Livewire.dispatch(event.callbackLoaderDispatch, { value: true });
 
-    if (event.image.files.length == 0) {
+    if (event.file.files.length == 0) {
       Livewire.dispatch(event.callbackDispatch, {
-        validationKey: { image: event.image.files.length == 0 },
-        validationMessage: { image: "The Image is required." },
-        imageName: null,
-        imagePath: null
+        validationKey: { file: event.file.files.length == 0 },
+        validationMessage: { file: "The File is required." },
+        fileName: null,
+        filePath: null
       });
       return;
     }
 
-    if (event.image.files[0].size >= event.imageSizeLimit * 1024 * 1024) {
+    if (event.file.files[0].size >= event.fileSizeLimit * 1024 * 1024) {
       Livewire.dispatch(event.callbackDispatch, {
         validationKey: {
-          image: event.image.files[0].size >= event.imageSizeLimit * 1024 * 1024
+          file: event.file.files[0].size >= event.fileSizeLimit * 1024 * 1024
         },
         validationMessage: {
-          image:
-            "The Image size should be less than " + event.imageSizeLimit + "."
+          file: "The File size should be less than " + event.fileSizeLimit + "."
         },
-        imageName: null,
-        imagePath: null
+        fileName: null,
+        filePath: null
       });
       return;
     }
 
     var formData = new FormData();
-    var image = event.image.files[0];
-    formData.append("image", image);
+    var file = event.file.files[0];
+    formData.append("file", file);
 
     $.ajax({
-      url: "/upload-image",
+      url: "/upload-file",
       type: "POST",
       headers: {
         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
@@ -96,8 +95,8 @@ document.addEventListener("livewire:init", () => {
         Livewire.dispatch(event.callbackDispatch, {
           validationKey: null,
           validationMessage: null,
-          imageName: response["imageName"],
-          imagePath: response["imagePath"]
+          fileName: response["fileName"],
+          filePath: response["filePath"]
         });
       }
     });

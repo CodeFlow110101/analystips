@@ -25,10 +25,10 @@ mount(function ($id) {
 ?>
 
 <div>
-    <div class="h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide flex justify-center items-center" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        News & Blogs
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="absolute inset-0 bg-black/50 flex justify-center items-center">News & Blogs</div>
     </div>
-    <div class="lg:flex lg:justify-between lg:gap-4 px-4 md:px-12 lg:px-20 xl:px-40 py-20">
+    <div class="lg:flex lg:justify-between lg:gap-4 px-4 md:px-12 lg:px-20 xl:px-28 py-20">
         <div class="lg:w-4/5 h-min grid grid-cols-1 gap-12 sm:gap-8">
             @foreach($blogs as $blog)
             <div wire:key="{{$blog->id}}" class="h-min grid grid-cols-1 gap-4 text-gray-800 font-semibold">

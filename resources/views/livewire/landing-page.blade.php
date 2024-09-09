@@ -45,8 +45,10 @@ mount(function () {
     <livewire:navbar />
     @if($path == '/')
     <livewire:landing-page-body />
-    @elseif($path == 'about' || $path == 'practice-domain')
+    @elseif($path == 'about')
     <livewire:about />
+    @elseif($path == 'practice-domain')
+    <livewire:practice-domain />
     @elseif(in_array($path,['technology-scouting','white-space-analysis','technology-landscape','invalidity-contentions','state-of-the-art-search','patent-valuation','evidence-of-use','patent-valuation','market-report','competitive-analysis']))
     <livewire:solution />
     @elseif($path == 'career')
