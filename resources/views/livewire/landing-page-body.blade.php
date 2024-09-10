@@ -54,7 +54,7 @@ mount(function () {
     <div class="flex items-center w-full p-4 py-8 sm:p-12 lg:py-36" style="background-image: url('{{ asset('images/pexels-julia-m-cameron-4145190.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="rounded-3xl lg:rounded-full bg-pink-500/80 lg:aspect-square text-white flex justify-center items-center max-sm:py-10 max-md:py-10 max-lg:py-32 p-4 sm:p-6">
             <div class="grid grid-cols-1 gap-6 sm:gap-10 text-balance w-full lg:max-w-md text-center">
-                <div class="text-2xl sm:text-4xl font-semibold">Patent Searches <span class="text-gray-800">Preparation</span></div>
+                <div class="text-2xl sm:text-4xl font-semibold">Patent Searches <span class="text-black">Preparation</span></div>
                 <div class="text-lg sm:text-xl font-semibold">Comprehensive Patent Search and Research Reports Delivered</div>
                 <div class="text-xs font-medium sm:text-sm">Exhaustive Patent Research Reports Prepared by an Experienced Team of Attorneys Specializing in Mechanical, Life Sciences, and Engineering Domains.</div>
             </div>
@@ -66,8 +66,8 @@ mount(function () {
             <div class="grid grid-cols-1 gap-4 lg:-translate-y-20 bg-white p-6 sm:p-12">
                 <div class="sm:tracking-widest text-amber-500 font-semibold sm:text-lg">Patrisen: Your Trusted Partner in Patent Research and Innovation</div>
                 <div class="text-lg sm:text-2xl tracking-wider uppercase font-bold">what we offer as reliable company</div>
-                <div class="text-sm font-medium text-gray-800 sm:leading-6">Patrisen was founded by a team of experienced patent attorneys with a shared vision of providing unparalleled services in patent research and report preparation. Recognizing the need for a specialized platform that delivers high-quality patent search services, Patrisen was established to support Research & Development, Infringement Analysis, and Commercialization efforts for clients across the globe.</div>
-                <div class="text-sm font-medium text-gray-800 sm:leading-6">Our attorneys bring decades of expertise across various technical domains, ensuring that each patent search and research report is meticulously crafted to meet the highest standards. Whether it's navigating the complexities of patent landscapes or providing crucial insights for commercialization, Patrisen is committed to empowering innovation through comprehensive and precise intellectual property services.</div>
+                <div class="text-sm font-medium text-black sm:leading-6">Patrisen was founded by a team of experienced patent attorneys with a shared vision of providing unparalleled services in patent research and report preparation. Recognizing the need for a specialized platform that delivers high-quality patent search services, Patrisen was established to support Research & Development, Infringement Analysis, and Commercialization efforts for clients across the globe.</div>
+                <div class="text-sm font-medium text-black sm:leading-6">Our attorneys bring decades of expertise across various technical domains, ensuring that each patent search and research report is meticulously crafted to meet the highest standards. Whether it's navigating the complexities of patent landscapes or providing crucial insights for commercialization, Patrisen is committed to empowering innovation through comprehensive and precise intellectual property services.</div>
                 <div class="py-4">
                     <a href="/contact-us" wire:navigate class="text-center text-white uppercase text-sm sm:text-base bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Contact us</a>
                 </div>
@@ -81,7 +81,7 @@ mount(function () {
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                     </div>
-                    <div class="text-gray-500 font-semibold w-full text-sm flex justify-between items-center gap-2">
+                    <div class="text-black font-semibold w-full text-sm flex justify-between items-center gap-2">
                         <div><span class="whitespace-nowrap">Experienced Attorneys: </span><span>Expertise in Mechanical, Life Sciences, and Engineering.</span></div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ mount(function () {
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                     </div>
-                    <div class="text-gray-500 font-semibold w-full text-sm flex justify-between items-center gap-2">
+                    <div class="text-black font-semibold w-full text-sm flex justify-between items-center gap-2">
                         <div><span class="whitespace-nowrap">Comprehensive Solutions: </span><span>Full-spectrum patent services from search to commercialization.</span></div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@ mount(function () {
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                     </div>
-                    <div class="text-gray-500 font-semibold w-full text-sm flex justify-between items-center gap-2">
+                    <div class="text-black font-semibold w-full text-sm flex justify-between items-center gap-2">
                         <div><span class="whitespace-nowrap">Global Database Access: </span><span>Extensive global coverage for thorough and precise research.</span></div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@ mount(function () {
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                     </div>
-                    <div class="text-gray-500 font-semibold w-full text-sm flex justify-between items-center gap-2">
+                    <div class="text-black font-semibold w-full text-sm flex justify-between items-center gap-2">
                         <div><span class="whitespace-nowrap">Innovative Methodology: </span><span>Advanced research using non-patent literature, databases, and physical surveys.</span></div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@ mount(function () {
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                         </svg>
                     </div>
-                    <div class="text-gray-500 font-semibold w-full text-sm flex justify-between items-center gap-2">
+                    <div class="text-black font-semibold w-full text-sm flex justify-between items-center gap-2">
                         <div><span class="whitespace-nowrap">Client-Centered Approach: </span><span>Personalized services aligned with your specific needs.</span></div>
                     </div>
                 </div>
@@ -130,13 +130,13 @@ mount(function () {
     </div>
 
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20 grid-cols-1 gap-4">
-        <div class="font-bold text-2xl text-gray-800 tracking-wider text-center uppercase">Our Services</div>
+        <div class="font-bold text-2xl text-black tracking-wider text-center uppercase">Our Services</div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
             @foreach($services as $key => $value)
             <div class="grid grid-cols-1 gap-2">
                 <img class="w-full h-64" src="{{ asset('images/'.$value['image']) }}">
                 <div class="font-semibold text-lg text-amber-500 capitalize"> {{str_replace('-',' ',$key)}}</div>
-                <div class="text-sm leading-6 font-light text-gray-800">{{$value['description']}}</div>
+                <div class="text-sm leading-6 font-light text-black">{{$value['description']}}</div>
                 <a href="/{{$key}}" wire:navigate class="pt-4">
                     <div class="text-center text-white uppercase text-xs rounded-sm bg-amber-500 whitespace-nowrap py-2 px-6 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</div>
                 </a>
@@ -147,13 +147,13 @@ mount(function () {
 
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8 px-4 md:px-12 lg:px-20 xl:px-28 pt-20 pb-8">
         <div class="grid grid-cols-1 gap-6 h-min text-justify">
-            <div class="text-gray-600 uppercase font-bold text-lg">Our History</div>
-            <div class="text-sm leading-normal font-normal text-gray-800">Patrisen was born out of a need to bridge the gap between high-quality patent research and the growing demands of the global innovation ecosystem. The founding attorneys recognized that many organizations struggled to find a dedicated partner that could provide comprehensive, reliable, and cost-effective patent search services. Thus, Patrisen was established to fill this void.</div>
-            <div class="text-sm leading-normal font-normal text-gray-800">From its inception, Patrisen has been committed to delivering excellence in every project. Over the years, we have built a reputation for reliability and precision, becoming the trusted partner for companies, research institutions, and legal professionals seeking robust patent search and research support.</div>
-            <div class="text-sm leading-normal font-normal text-gray-800">Our journey continues as we expand our services, continually adapting to the evolving needs of our clients and the dynamic world of intellectual property. At Patrisen, we are more than just a service provider; we are your partner in innovation, dedicated to helping you navigate the patent landscape with confidence and clarity.</div>
+            <div class="text-black uppercase font-bold text-lg">Our History</div>
+            <div class="text-sm leading-normal font-normal text-black">Patrisen was born out of a need to bridge the gap between high-quality patent research and the growing demands of the global innovation ecosystem. The founding attorneys recognized that many organizations struggled to find a dedicated partner that could provide comprehensive, reliable, and cost-effective patent search services. Thus, Patrisen was established to fill this void.</div>
+            <div class="text-sm leading-normal font-normal text-black">From its inception, Patrisen has been committed to delivering excellence in every project. Over the years, we have built a reputation for reliability and precision, becoming the trusted partner for companies, research institutions, and legal professionals seeking robust patent search and research support.</div>
+            <div class="text-sm leading-normal font-normal text-black">Our journey continues as we expand our services, continually adapting to the evolving needs of our clients and the dynamic world of intellectual property. At Patrisen, we are more than just a service provider; we are your partner in innovation, dedicated to helping you navigate the patent landscape with confidence and clarity.</div>
         </div>
         <div class="grid grid-cols-1 gap-6 h-min">
-            <div class="text-gray-600 uppercase font-bold text-lg">What we Offer</div>
+            <div class="text-black uppercase font-bold text-lg">What we Offer</div>
             <div class="grid grid-cols-1 gap-8">
                 <div x-data="{showDropdown : false}">
                     <div class="flex justify-between items-start gap-4">
@@ -165,7 +165,7 @@ mount(function () {
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
                             </svg>
                         </div>
-                        <div class="text-md w-full font-thin text-gray-800 grid grid-cols-1 gap-4">
+                        <div class="text-md w-full font-thin text-black grid grid-cols-1 gap-4">
                             <div class="text-amber-500 font-semibold">Comprehensive Patent Search Services</div>
                             <div x-show="showDropdown">Exhaustive patent research and report preparation across diverse technical domains.</div>
                         </div>
@@ -181,7 +181,7 @@ mount(function () {
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
                             </svg>
                         </div>
-                        <div class="text-md w-full font-thin text-gray-800 grid grid-cols-1 gap-4">
+                        <div class="text-md w-full font-thin text-black grid grid-cols-1 gap-4">
                             <div class="text-amber-500 font-semibold">Infringement Analysis</div>
                             <div x-show="showDropdown">Detailed assessments to identify potential patent infringements and protect your intellectual property.</div>
                         </div>
@@ -197,7 +197,7 @@ mount(function () {
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
                             </svg>
                         </div>
-                        <div class="text-md w-full font-thin text-gray-800 grid grid-cols-1 gap-4">
+                        <div class="text-md w-full font-thin text-black grid grid-cols-1 gap-4">
                             <div class="text-amber-500 font-semibold">Commercialization Support</div>
                             <div x-show="showDropdown">Strategies and guidance to help you monetize your patents effectively.</div>
                         </div>
@@ -206,13 +206,13 @@ mount(function () {
             </div>
         </div>
         <div class="grid grid-cols-1 gap-6 h-min">
-            <div class="text-gray-600 uppercase font-bold text-lg">Skills and Experiences</div>
+            <div class="text-black uppercase font-bold text-lg">Skills and Experiences</div>
             <div class="grid grid-cols-1 gap-8 h-min">
                 <div class="grid grid-cols-1 gap-2">
                     <div class="w-full h-min bg-transparent rounded-full grid grid-cols-1 gap-2">
                         <div style="width: 80%" class="flex justify-between">
-                            <div class="text-sm text-gray-500 uppercase">Deep Technical Expertise</div>
-                            <div class="bg-gray-400 w-min text-white text-xs font-medium px-3 py-1 h-min self-end rounded">80%
+                            <div class="text-sm text-black uppercase">Deep Technical Expertise</div>
+                            <div class="bg-amber-500 w-min text-white text-xs font-medium px-3 py-1 h-min self-end rounded">80%
                             </div>
                         </div>
                         <div class="bg-amber-500 h-1.5 rounded-full" style="width: 80%"></div>
@@ -221,8 +221,8 @@ mount(function () {
                 <div class="grid grid-cols-1 gap-2">
                     <div class="w-full h-min bg-transparent rounded-full grid grid-cols-1 gap-2">
                         <div style="width: 90%" class="flex justify-between">
-                            <div class="text-sm text-gray-500 uppercase">Advanced Global Research Capabilities</div>
-                            <div class="bg-gray-400 w-min text-white text-xs font-medium px-3 py-1 h-min self-end rounded">90%
+                            <div class="text-sm text-black uppercase">Advanced Global Research Capabilities</div>
+                            <div class="bg-amber-500 w-min text-white text-xs font-medium px-3 py-1 h-min self-end rounded">90%
                             </div>
                         </div>
                         <div class="bg-amber-500 h-1.5 rounded-full" style="width: 90%"></div>
@@ -231,8 +231,8 @@ mount(function () {
                 <div class="grid grid-cols-1 gap-2">
                     <div class="w-full h-min bg-transparent rounded-full grid grid-cols-1 gap-2">
                         <div style="width: 60%" class="flex justify-between">
-                            <div class="text-sm text-gray-500 uppercase">Global Compliance and Perspective</div>
-                            <div class="bg-gray-400 w-min text-white text-xs font-medium px-3 py-1 h-min self-end rounded">60%
+                            <div class="text-sm text-black uppercase">Global Compliance and Perspective</div>
+                            <div class="bg-amber-500 w-min text-white text-xs font-medium px-3 py-1 h-min self-end rounded">60%
                             </div>
                         </div>
                         <div class="bg-amber-500 h-1.5 rounded-full" style="width: 60%"></div>
@@ -241,8 +241,8 @@ mount(function () {
                 <div class="grid grid-cols-1 gap-2">
                     <div class="w-full h-min bg-transparent rounded-full grid grid-cols-1 gap-2">
                         <div style="width: 88%" class="flex justify-between">
-                            <div class="text-sm text-gray-500 uppercase">Industry-Specific Insights and Customization</div>
-                            <div class="bg-gray-400 w-min text-white text-xs font-medium px-3 py-1 h-min self-end rounded">88%
+                            <div class="text-sm text-black uppercase">Industry-Specific Insights and Customization</div>
+                            <div class="bg-amber-500 w-min text-white text-xs font-medium px-3 py-1 h-min self-end rounded">88%
                             </div>
                         </div>
                         <div class="bg-amber-500 h-1.5 rounded-full" style="width: 88%"></div>
@@ -255,7 +255,7 @@ mount(function () {
 
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20 h-min grid grid-cols-1 gap-10">
         <div class="grid grid-cols-1 gap-4 h-min">
-            <div class="text-2xl font-semibold uppercase text-gray-800 text-center">Our Process</div>
+            <div class="text-2xl font-semibold uppercase text-black text-center">Our Process</div>
             <div class="flex justify-center">
                 <div class="border-2 rounded-full h-min w-20 border-amber-500"></div>
             </div>
@@ -272,7 +272,7 @@ mount(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="text-gray-500 font-normal uppercase">Initial Consultation and Assessment</div>
+                    <div class="text-black font-normal uppercase">Initial Consultation and Assessment</div>
                 </div>
                 <div class="grid grid-cols-1 group gap-6 text-center">
                     <div class="flex justify-center items-center">
@@ -284,7 +284,7 @@ mount(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="text-gray-500 font-normal uppercase">Scope Definition and Strategy Development</div>
+                    <div class="text-black font-normal uppercase">Scope Definition and Strategy Development</div>
                 </div>
                 <div class="grid grid-cols-1 group gap-6 text-center">
                     <div class="flex justify-center items-center">
@@ -296,7 +296,7 @@ mount(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="text-gray-500 font-normal uppercase">Report Preparation</div>
+                    <div class="text-black font-normal uppercase">Report Preparation</div>
                 </div>
                 <div class="grid grid-cols-1 group gap-6 text-center">
                     <div class="flex justify-center items-center">
@@ -308,7 +308,7 @@ mount(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="text-gray-500 font-normal uppercase">Client Review and Feedback</div>
+                    <div class="text-black font-normal uppercase">Client Review and Feedback</div>
                 </div>
                 <div class="grid grid-cols-1 group gap-6 text-center">
                     <div class="flex justify-center items-center">
@@ -320,7 +320,7 @@ mount(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="text-gray-500 font-normal uppercase">Revisions and Finalization</div>
+                    <div class="text-black font-normal uppercase">Revisions and Finalization</div>
                 </div>
                 <div class="grid grid-cols-1 group gap-6 text-center">
                     <div class="flex justify-center items-center">
@@ -332,7 +332,7 @@ mount(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="text-gray-500 font-normal uppercase">Delivery and Ongoing Support</div>
+                    <div class="text-black font-normal uppercase">Delivery and Ongoing Support</div>
                 </div>
                 <div class="grid grid-cols-1 group gap-6 text-center">
                     <div class="flex justify-center items-center">
@@ -344,7 +344,7 @@ mount(function () {
                             </div>
                         </div>
                     </div>
-                    <div class="text-gray-500 font-normal uppercase">Continuous Monitoring and Updates</div>
+                    <div class="text-black font-normal uppercase">Continuous Monitoring and Updates</div>
                 </div>
             </div>
         </div>
@@ -352,11 +352,11 @@ mount(function () {
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20 flex justify-center">
         <div class="grid grid-cols-1 text-center gap-4">
             <div class="text-sm text-black font-semibold uppercase">Our clients</div>
-            <div class="text-2xl font-semibold uppercase text-gray-800">Trusted Companies</div>
+            <div class="text-2xl font-semibold uppercase text-black">Trusted Companies</div>
             <div class="flex justify-center">
                 <div class="border-2 rounded-full h-min w-20 border-amber-500"></div>
             </div>
-            <div class="text-xl text-gray-500">Our Company is a trusted service provider of high quality Patent search, commited for transparency, ethics and work on client satisfaction.</div>
+            <div class="text-xl text-black">Our Company is a trusted service provider of high quality Patent search, commited for transparency, ethics and work on client satisfaction.</div>
             <div class="grid grid-cols-1 gap-8 py-12 sm:py-16">
                 <div class="flex items-center overflow-x-auto hide-scrollbar">
                     <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
@@ -370,7 +370,7 @@ mount(function () {
     </div>
 
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20 grid grid-cols-1 gap-4">
-        <div class="font-bold text-2xl text-gray-800 tracking-wider text-center uppercase">Latest news from blog</div>
+        <div class="font-bold text-2xl text-black tracking-wider text-center uppercase">Latest news from blog</div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
             @foreach($blogs as $blog)
             <div class="grid grid-cols-1 gap-2">
@@ -388,7 +388,7 @@ mount(function () {
                     </div>
                     <div>{{ \Carbon\Carbon::parse($blog->created_at)->format('d F Y') }}</div>
                 </div>
-                <div class="text-sm leading-6 font-light text-gray-800">{{Str::limit($blog->description, 150)}}</div>
+                <div class="text-sm leading-6 font-light text-black">{{Str::limit($blog->description, 150)}}</div>
                 <div class="pt-4">
                     <a href="/blog?id={{$blog->id}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</a>
                 </div>
@@ -400,21 +400,21 @@ mount(function () {
     <!-- <div class="px-40 py-12 grid grid-cols-1 gap-24">
         <div class="text-center grid grid-cols-1 gap-4">
             <div class="text-amber-500 text-center uppercase">accusam et justo duo dolores et ea rebum. Stet clita no sea</div>
-            <div class="font-bold text-2xl text-gray-800 tracking-wider text-center uppercase">What are Clients Say</div>
+            <div class="font-bold text-2xl text-black tracking-wider text-center uppercase">What are Clients Say</div>
         </div>
         <div class="flex justify-center">
             <div class="grid grid-cols-3 gap-2 w-3/4">
                 <div class="grid grid-cols-2 gap-1">
                     <div class="flex justify-center items-center">
                         <div class="bg-gray-300 rounded-full p-8 w-min h-min">
-                            <svg class="w-6 h-6 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                            <svg class="w-6 h-6 text-gray-200 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                                 <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
                             </svg>
                         </div>
                     </div>
                     <div class="flex justify-center items-center">
                         <div class="bg-gray-300 rounded-full p-12 w-min h-min">
-                            <svg class="w-6 h-6 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                            <svg class="w-6 h-6 text-gray-200 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                                 <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
                             </svg>
                         </div>
@@ -422,7 +422,7 @@ mount(function () {
                 </div>
                 <div class="flex justify-center">
                     <div class="bg-gray-300 rounded-full p-16 w-min h-min">
-                        <svg class="w-6 h-6 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                        <svg class="w-6 h-6 text-gray-200 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                             <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
                         </svg>
                     </div>
@@ -430,14 +430,14 @@ mount(function () {
                 <div class="grid grid-cols-2 gap-1">
                     <div class="flex justify-center items-center">
                         <div class="bg-gray-300 rounded-full p-12 w-min h-min">
-                            <svg class="w-6 h-6 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                            <svg class="w-6 h-6 text-gray-200 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                                 <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
                             </svg>
                         </div>
                     </div>
                     <div class="flex justify-center items-center">
                         <div class="bg-gray-300 rounded-full p-8 w-min h-min">
-                            <svg class="w-6 h-6 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                            <svg class="w-6 h-6 text-gray-200 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                                 <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z" />
                             </svg>
                         </div>

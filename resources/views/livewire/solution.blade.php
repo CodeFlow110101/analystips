@@ -276,35 +276,35 @@ mount(function () {
     </div>
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-20 xl:flex xl:justify-between xl:gap-4">
         <div class="xl:w-4/5 grid grid-cols-1 gap-6 sm:gap-12 h-min xl:pr-32">
-            <div class="capitalize text-xl sm:text-3xl tracking-wide text-sky-400 font-medium">{{str_replace('-',' ',$path)}}</div>
+            <div class="capitalize text-xl sm:text-3xl tracking-wide text-amber-500 font-medium">{{str_replace('-',' ',$path)}}</div>
             <div class="grid grid-cols-1 gap-4 h-min">
-                <div class="grid grid-cols-1 gap-10 h-min">
+                <div class="grid grid-cols-1 gap-14 h-min">
                     <div class="grid grid-cols-1 gap-6 h-min">
                         @foreach($description[$path] as $paragraphs)
-                        <div class="text-xs sm:text-sm leading-2 font-normal text-gray-800 text-justify">
+                        <div class="text-xs sm:text-base leading-2 font-medium text-black text-justify">
                             {{$paragraphs}}
                         </div>
                         @endforeach
                     </div>
 
-                    <div class="text-xs sm:text-sm leading-2 font-normal text-gray-800 text-justify">
-                        <span class="text-lg sm:text-2xl tracking-wide text-sky-400 font-medium capitalize">Who @if($path == 'market-report'){{'Creates'}}@else{{'Performs'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'technology-landscape') {{'Analysis'}}@endif?</span>
+                    <div class="text-xs sm:text-base leading-2 font-medium text-black text-justify">
+                        <span class="text-lg sm:text-2xl tracking-wide text-amber-500 font-medium capitalize">Who @if($path == 'market-report'){{'Creates'}}@else{{'Performs'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'technology-landscape') {{'Analysis'}}@endif?</span>
                         {{$whoPerforms[$path]}}
                     </div>
                     <div class="grid grid-cols-1 gap-3 h-min">
-                        <div class="text-lg sm:text-2xl tracking-wide text-sky-400 font-medium capitalize">
+                        <div class="text-lg sm:text-2xl tracking-wide text-amber-500 font-medium capitalize">
                             Benefits of {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif
                         </div>
-                        <div class="grid grid-cols-1 gap-6 h-min text-sm font-normal text-gray-800">
+                        <div class="grid grid-cols-1 gap-4 h-min text-sm font-normal text-black">
                             @foreach($benefits[$path] as $heading => $statement)
-                            <div class="max-sm:text-xs">
-                                <span class="tracking-wide text-sky-400 text-base font-medium">{{$loop->iteration}}) {{$heading}}: </span>{{$statement}}
+                            <div class="max-sm:text-xs font-medium">
+                                <span class="tracking-wide text-amber-500 text-base font-medium">{{$loop->iteration}}) {{$heading}}: </span>{{$statement}}
                             </div>
                             @endforeach
                         </div>
                     </div>
-                    <div class="text-xs sm:text-sm leading-2 font-normal text-gray-800 text-justify">
-                        <span class="text-lg sm:text-2xl sm:tracking-wide text-sky-400 font-medium capitalize">Purpose of {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</span>
+                    <div class="text-xs sm:text-base leading-2 font-medium text-black text-justify">
+                        <span class="text-lg sm:text-2xl sm:tracking-wide text-amber-500 font-medium capitalize">Purpose of {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</span>
                         {{$purpose[$path]}}
                     </div>
                 </div>
@@ -312,19 +312,19 @@ mount(function () {
         </div>
         <div class="max-xl:hidden w-1/5 h-min grid grid-cols-1 gap-8">
             <div class="h-min grid grid-cols-1 gap-2">
-                <div class="text-2xl font-medium text-gray-800">Our Services</div>
-                <div class="border-2 border-sky-400 h-0 w-10/12"></div>
+                <div class="text-2xl font-medium text-black">Our Services</div>
+                <div class="border-2 border-amber-500 h-0 w-10/12"></div>
             </div>
             <div class="h-min grid grid-cols-1 gap-2 font-medium">
                 @foreach($bgImage as $key => $value)
-                <a href="/{{$key}}" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 group shadow-md shadow-black/50 @if($path == $key) bg-sky-400 @else hover:bg-sky-400 bg-white text-gray-800 @endif">
+                <a href="/{{$key}}" wire:navigate class="text-sm cursor-pointer transition-colors duration-500 group shadow-md shadow-black/50 @if($path == $key) bg-amber-500 @else hover:bg-amber-500 bg-white text-black @endif">
                     <div class="p-2.5 flex justify-between items-center gap-2 w-min whitespace-nowrap">
                         <div>
-                            <svg class="w-3 h-3  @if($path == $key) text-white @else group-hover:text-white text-gray-800 @endif" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <svg class="w-3 h-3  @if($path == $key) text-white @else group-hover:text-white text-black @endif" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m9 5 7 7-7 7" />
                             </svg>
                         </div>
-                        <div class="@if($path == $key) text-white @else group-hover:text-white text-gray-800 @endif"> {{str_replace('-',' ',$key)}}</div>
+                        <div class="capitalize @if($path == $key) text-white @else group-hover:text-white text-black @endif"> {{str_replace('-',' ',$key)}}</div>
                     </div>
                 </a>
                 @endforeach
@@ -333,12 +333,12 @@ mount(function () {
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-20">
         <div class="grid grid-cols-1 gap-6 h-min">
-            <div class="text-gray-600 uppercase font-bold text-base sm:text-lg">What We Can Do for You?</div>
+            <div class="text-black uppercase font-bold text-base sm:text-lg">What We Can Do for You?</div>
             <div class="grid grid-cols-1 gap-8">
                 @foreach($whatWeDo[$path] as $heading => $statement)
                 <div x-data="{showDropdown : false}">
                     <div class="flex justify-between gap-4">
-                        <div @click="showDropdown = !showDropdown" :class="showDropdown ? 'bg-sky-400' : 'bg-gray-400'" class="w-min h-min rounded-full p-2 cursor-pointer">
+                        <div @click="showDropdown = !showDropdown" :class="showDropdown ? 'bg-amber-500' : 'bg-gray-400'" class="w-min h-min rounded-full p-2 cursor-pointer">
                             <svg x-show="!showDropdown" class="w-3 sm:w-6 h-3 sm:h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />
                             </svg>
@@ -346,9 +346,9 @@ mount(function () {
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
                             </svg>
                         </div>
-                        <div class="text-md w-full items-center font-thin text-gray-800 grid grid-cols-1 gap-1 sm:gap-4">
-                            <div class="text-base sm:text-xl text-sky-400 font-semibold">{{$heading}}</div>
-                            <div x-show="showDropdown" class="max-sm:text-xs">{{$statement}}</div>
+                        <div class="text-md w-full items-center font-thin text-black grid grid-cols-1 gap-1 sm:gap-4">
+                            <div class="text-base sm:text-xl text-amber-500 font-semibold">{{$heading}}</div>
+                            <div x-show="showDropdown" class="max-sm:text-xs font-medium">{{$statement}}</div>
                         </div>
                     </div>
                 </div>
@@ -356,42 +356,42 @@ mount(function () {
             </div>
         </div>
         <div class="grid grid-cols-1 gap-6 h-min">
-            <div class="text-gray-600 uppercase font-bold text-lg">Skills and Experiences</div>
+            <div class="text-black uppercase font-bold text-lg">Skills and Experiences</div>
             <div class="grid grid-cols-1 gap-8 h-min">
                 <div class="grid grid-cols-1 gap-2">
                     <div class="w-full h-min bg-transparent rounded-full grid grid-cols-1 gap-2">
                         <div style="width: 80%" class="flex justify-between">
-                            <div class="text-sm text-gray-500 uppercase">Social Marketing</div>
-                            <div class="bg-gray-400 w-min text-white text-xs font-medium px-3 py-1 rounded">80%
+                            <div class="text-sm text-black font-medium uppercase">Social Marketing</div>
+                            <div class="bg-amber-500 w-min text-white text-xs font-medium px-3 py-1 rounded">80%
                             </div>
                         </div>
-                        <div class="bg-sky-400 h-1.5 rounded-full" style="width: 80%"></div>
+                        <div class="bg-amber-500 h-1.5 rounded-full" style="width: 80%"></div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
                     <div class="w-full h-min bg-transparent rounded-full grid grid-cols-1 gap-2">
                         <div style="width: 90%" class="flex justify-between">
-                            <div class="text-sm text-gray-500 uppercase">Branding</div>
-                            <div class="bg-gray-400 w-min text-white text-xs font-medium px-3 py-1 rounded">90%
+                            <div class="text-sm text-black font-medium uppercase">Branding</div>
+                            <div class="bg-amber-500 w-min text-white text-xs font-medium px-3 py-1 rounded">90%
                             </div>
                         </div>
-                        <div class="bg-sky-400 h-1.5 rounded-full" style="width: 90%"></div>
+                        <div class="bg-amber-500 h-1.5 rounded-full" style="width: 90%"></div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 gap-2">
                     <div class="w-full h-min bg-transparent rounded-full grid grid-cols-1 gap-2">
                         <div style="width: 60%" class="flex justify-between">
-                            <div class="text-sm text-gray-500 uppercase">Stratergy Planning</div>
-                            <div class="bg-gray-400 w-min text-white text-xs font-medium px-3 py-1 rounded">60%
+                            <div class="text-sm text-black font-medium uppercase">Stratergy Planning</div>
+                            <div class="bg-amber-500 w-min text-white text-xs font-medium px-3 py-1 rounded">60%
                             </div>
                         </div>
-                        <div class="bg-sky-400 h-1.5 rounded-full" style="width: 60%"></div>
+                        <div class="bg-amber-500 h-1.5 rounded-full" style="width: 60%"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-14 sm:py-28 bg-sky-400 grid grid-cols-1 gap-4 text-center text-white font-thin">
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-14 sm:py-28 bg-amber-500 grid grid-cols-1 gap-4 text-center text-white font-thin">
         <div class="text-xl sm:text-3xl capitalize">Additional Information About {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</div>
         <div class="text-sm sm:text-lg tracking-widest">{{$additionalInfo[$path]}}</div>
     </div>
@@ -404,18 +404,18 @@ mount(function () {
             </div>
         </div>
     </div>
-    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16 text-gray-800">
+    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16 text-black">
         <div class="text-lg sm:text-2xl font-semibold capitalize">Why @if($path == 'market-report'){{'Choose our'}}@else{{'Do'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'market-report'){{'s'}}@endif @if($path == 'technology-landscape') Analysis @endif @if($path != 'market-report'){{'with Us'}}@endif?</div>
         <div class="h-min grid grid-cols-1 gap-4 font-semibold">
             @foreach($whyChooseUs[$path] as $heading => $statement)
             <div class="flex justify-between items-start gap-2">
                 <div>
-                    <svg class="w-6 h-6 text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 11.917 9.724 16.5 19 7.5" />
                     </svg>
                 </div>
-                <div class="text-xs sm:text-base md:text-lg lg:text-xl text-sky-400 font-semibold whitespace-nowrap">{{$heading}} :</div>
-                <div class="text-xs sm:text-base md:text-lg lg:text-xl max-sm:tracking-tighter w-full items-center font-thin text-gray-800">
+                <div class="text-xs sm:text-base md:text-lg lg:text-xl text-amber-500 font-semibold whitespace-nowrap">{{$heading}} :</div>
+                <div class="text-xs sm:text-sm md:text-lg lg:text-xl max-sm:tracking-tighter w-full items-center font-medium text-black">
                     {{$statement}}
                 </div>
             </div>

@@ -35,7 +35,7 @@ mount(function ($id) {
                 <div class="flex justify-center">
                     <img src="{{asset('storage/'.$blog->image)}}" class="w-auto h-64">
                 </div>
-                <a href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-sky-400 cursor-pointer">
+                <a href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-amber-500 cursor-pointer">
                     {{$blog->title}}
                 </a>
                 <div class="text-sm text-gray-400 font-medium w-min whitespace-nowrap flex justify-center gap-2 items-center">
@@ -49,7 +49,7 @@ mount(function ($id) {
                 <div class="overflow-y-auto max-h-56 text-xs leading-6 font-medium">{{$id ? $blog->description : Str::limit($blog->description, 400)}}</div>
                 @if(!$this->id)
                 <div>
-                    <a href="/blog?id={{$blog->id}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-sky-400 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-sky-400 hover:bg-white hover:text-sky-400">Read more</a>
+                    <a href="/blog?id={{$blog->id}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</a>
                 </div>
                 @endif
             </div>
@@ -60,18 +60,18 @@ mount(function ($id) {
         </div>
         <div class="lg:w-1/5 h-min grid grid-cols-1 gap-4">
             <div>
-                <input wire:model.live="search" class="border border-gray-500 focus:border-sky-400 transition-colors duration-200 w-full px-4 py-2 outline-none" placeholder="Search">
+                <input wire:model.live="search" class="border border-gray-500 focus:border-amber-500 transition-colors duration-200 w-full px-4 py-2 outline-none" placeholder="Search">
             </div>
             <div>
                 <div class="text-lg tracking-wide text-gray-800 font-semibold">Recent Posts</div>
             </div>
             <div class="flex justify-center">
-                <div class="h-0 border border-sky-400 w-1/5"></div>
+                <div class="h-0 border border-amber-500 w-1/5"></div>
                 <div class="h-0 border border-gray-200 w-4/5"></div>
             </div>
             <div class="h-min text-left grid grid-cols-1 gap-4">
                 @foreach($recent_blogs as $blog)
-                <a wire:key="{{$blog->id}}" href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-sky-400 text-gray-800 font-semibold cursor-pointer">{{$blog->title}}</a>
+                <a wire:key="{{$blog->id}}" href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-amber-500 text-gray-800 font-semibold cursor-pointer">{{$blog->title}}</a>
                 @endforeach
             </div>
         </div>

@@ -12,40 +12,40 @@ use function Livewire\Volt\{state};
             <div class="grid grid-cols-1 gap-4 h-min">
                 <div class="grid grid-cols-1 gap-4 h-min">
                     <div class="text-white text-lg tracking-wider">About Us</div>
-                    <div class="border-2 rounded-full border-sky-400 w-12 h-0"></div>
+                    <div class="border-2 rounded-full border-amber-500 w-12 h-0"></div>
                 </div>
                 <div class="text-sm leading-6 font-medium text-gray-400 text-justify">Patrisen was founded by a team of experienced patent attorneys with a shared vision of providing unparalleled services in patent research and report preparation. Recognizing the need for a specialized platform that delivers high-quality patent search services, Patrisen was established to support Research & Development, Infringement Analysis, and Commercialization efforts for clients across the globe.</div>
             </div>
             <div class="max-xl:hidden grid grid-cols-1 gap-4 h-min">
                 <div class="grid grid-cols-1 gap-4 h-min">
                     <div class="text-white text-lg tracking-wider">Navigation</div>
-                    <div class="border-2 rounded-full border-sky-400 w-12 h-0"></div>
+                    <div class="border-2 rounded-full border-amber-500 w-12 h-0"></div>
                 </div>
                 <div class="text-sm font-light text-gray-200 grid grid-cols-1 gap-2">
-                    <a href="/" wire:navigate class="hover:text-sky-400 cursor-pointer">Home</a>
-                    <a href="/practice-domain" wire:navigate class="hover:text-sky-400 cursor-pointer">Practice Domain</a>
-                    <a href="/blog" wire:navigate class="hover:text-sky-400 cursor-pointer">News & Blogs</a>
-                    <a href="/career" wire:navigate class="hover:text-sky-400 cursor-pointer">Career</a>
-                    <a href="/contact-us" wire:navigate class="hover:text-sky-400 cursor-pointer">Contact</a>
-                    <a href="/terms-and-conditions" wire:navigate class="hover:text-sky-400 cursor-pointer">Terms & Conditions</a>
-                    <a href="/privacy-policy" wire:navigate class="hover:text-sky-400 cursor-pointer">Privacy Policy</a>
+                    <a href="/" wire:navigate class="hover:text-amber-500 cursor-pointer">Home</a>
+                    <a href="/practice-domain" wire:navigate class="hover:text-amber-500 cursor-pointer">Practice Domain</a>
+                    <a href="/blog" wire:navigate class="hover:text-amber-500 cursor-pointer">News & Blogs</a>
+                    <a href="/career" wire:navigate class="hover:text-amber-500 cursor-pointer">Career</a>
+                    <a href="/contact-us" wire:navigate class="hover:text-amber-500 cursor-pointer">Contact</a>
+                    <a href="/terms-and-conditions" wire:navigate class="hover:text-amber-500 cursor-pointer">Terms & Conditions</a>
+                    <a href="/privacy-policy" wire:navigate class="hover:text-amber-500 cursor-pointer">Privacy Policy</a>
                 </div>
             </div>
             <div class="max-xl:hidden grid grid-cols-1 gap-4 h-min">
                 <div class="grid grid-cols-1 gap-4 h-min">
                     <div class="text-white text-lg tracking-wider">Useful Links</div>
-                    <div class="border-2 rounded-full border-sky-400 w-12 h-0"></div>
+                    <div class="border-2 rounded-full border-amber-500 w-12 h-0"></div>
                 </div>
                 <div class="text-sm font-light text-gray-200 grid grid-cols-1 gap-2 h-min">
-                    <a href="/about" wire:navigate class="hover:text-sky-400 cursor-pointer">Who we are</a>
-                    <a href="/terms-and-conditions" wire:navigate class="hover:text-sky-400 cursor-pointer">Terms and Conditions</a>
-                    <a href="/privacy-policy" wire:navigate class="hover:text-sky-400 cursor-pointer">Privacy Policy</a>
+                    <a href="/about" wire:navigate class="hover:text-amber-500 cursor-pointer">Who we are</a>
+                    <a href="/terms-and-conditions" wire:navigate class="hover:text-amber-500 cursor-pointer">Terms and Conditions</a>
+                    <a href="/privacy-policy" wire:navigate class="hover:text-amber-500 cursor-pointer">Privacy Policy</a>
                 </div>
             </div>
             <div class=" grid grid-cols-1 gap-4 h-min">
                 <div class="grid grid-cols-1 gap-4 h-min">
                     <div class="text-white text-lg tracking-wider">Contact Us</div>
-                    <div class="border-2 rounded-full border-sky-400 w-12 h-0"></div>
+                    <div class="border-2 rounded-full border-amber-500 w-12 h-0"></div>
                 </div>
                 <div class="text-sm font-light text-gray-200 grid grid-cols-1 gap-2 h-min">
                     <div class="text-xs leading-tight flex justify-between items-start gap-2 sm:gap-4">
