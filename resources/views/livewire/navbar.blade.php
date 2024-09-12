@@ -10,9 +10,8 @@ use function Livewire\Volt\{state};
     <div class="flex justify-between items-center py-6 sm:py-6 px-4 md:px-4 lg:px-8 xl:px-16">
         <a href="/" wire:navigate class="flex justify-between gap-4 items-center">
             <div>
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 sm:h-12" alt="Flowbite Logo" />
+                <img src="{{asset('images/Patrisen_Transparent_Logo_resoluted.png')}}" class="h-8 sm:h-12" alt="Flowbite Logo" />
             </div>
-            <div class="text-xl sm:text-2xl font-semibold text-gray-600">Patrisen</div>
         </a>
         <div class="max-xl:hidden text-sm flex justify-between gap-5 text-black font-semibold">
             <a href="/" wire:navigate class="hover:text-amber-500">HOME</a>
