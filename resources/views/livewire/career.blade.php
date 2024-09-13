@@ -46,7 +46,7 @@ on(['handle-career-file' => function ($validationKey, $validationMessage, $fileN
         }
         $this->dispatch('career-submit-loader', value: false);
     } else {
-        Mail::to('kedarenishant11111@gmail.com')->send(new Career($this->name, $this->email, $this->contact, $this->comment, $filePath));
+        Mail::to('info@patrisen.com')->send(new Career($this->name, $this->email, $this->contact, $this->comment, $filePath));
         Storage::disk('public')->deleteDirectory('resumefiles');
         $this->dispatch('show-toastr', message: 'Message Sent');
         $this->reset();

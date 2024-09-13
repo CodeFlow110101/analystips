@@ -12,7 +12,7 @@ rules(['name' => 'required|min:3', 'email' => 'required|email', 'contact' => 're
 
 $sendMail = function () {
     $this->validate();
-    Mail::to('kedarenishant11111@gmail.com')->send(new Inquery($this->name, $this->email, $this->contact, $this->country, $this->comment));
+    Mail::to('info@patrisen.com')->send(new Inquery($this->name, $this->email, $this->contact, $this->country, $this->comment));
     $this->dispatch('show-toastr', message: 'Message Sent');
     $this->reset();
 };

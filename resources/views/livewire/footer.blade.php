@@ -84,8 +84,4 @@ use function Livewire\Volt\{state};
             </div>
         </div>
     </div>
-
-    <div class="bg-slate-800 px-4 md:px-12 lg:px-20 xl:px-40 py-4">
-        <div class="text-gray-300 text-xs sm:text-sm">Copyright 2016 © Gumble - Broker & Finance PSD Template | All Rights Reserved</div>
-    </div>
 </div>
