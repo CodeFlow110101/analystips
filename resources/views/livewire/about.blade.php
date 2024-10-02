@@ -7,7 +7,7 @@ use function Livewire\Volt\{state};
 ?>
 
 <div>
-    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('page-bg-images/about.jpeg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-black/50 flex justify-center items-center">About us</div>
     </div>
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-28 grid grid-cols-1 gap-36">
@@ -22,72 +22,6 @@ use function Livewire\Volt\{state};
                 <div class="font-medium grid grid-cols-1 gap-2">
                     <div>Patrisen was founded by a team of experienced patent attorneys with a shared vision of providing unparalleled services in patent research and report preparation. Recognizing the need for a specialized platform that delivers high-quality patent search services, Patrisen was established to support Research & Development, Infringement Analysis, and Commercialization efforts for clients across the globe.</div>
                     <div>Our attorneys bring decades of expertise across various technical domains, ensuring that each patent search and research report is meticulously crafted to meet the highest standards. Whether it's navigating the complexities of patent landscapes or providing crucial insights for commercialization, Patrisen is committed to empowering innovation through comprehensive and precise intellectual property services.</div>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 uppercase">
-                    <div class="flex justify-between items-center gap-1 w-min whitespace-nowrap">
-                        <div>
-                            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="text-sm font-medium text-black">technology scouting</div>
-                    </div>
-                    <div class="flex justify-between items-center gap-1 w-min whitespace-nowrap">
-                        <div>
-                            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="text-sm font-medium text-black">white space analysis</div>
-                    </div>
-                    <div class="flex justify-between items-center gap-1 w-min whitespace-nowrap">
-                        <div>
-                            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="text-sm font-medium text-black">technology landscape</div>
-                    </div>
-                    <div class="flex justify-between items-center gap-1 w-min whitespace-nowrap">
-                        <div>
-                            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="text-sm font-medium text-black">invalidity contentions</div>
-                    </div>
-                    <div class="flex justify-between items-center gap-1 w-min whitespace-nowrap">
-                        <div>
-                            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="text-sm font-medium text-black">state of the art search</div>
-                    </div>
-                    <div class="flex justify-between items-center gap-1 w-min whitespace-nowrap">
-                        <div>
-                            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="text-sm font-medium text-black">patent valuation</div>
-                    </div>
-                    <div class="flex justify-between items-center gap-1 w-min whitespace-nowrap">
-                        <div>
-                            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="text-sm font-medium text-black">market report</div>
-                    </div>
-                    <div class="flex justify-between items-center gap-1 w-min whitespace-nowrap">
-                        <div>
-                            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                                <path fill-rule="evenodd" d="M10.271 5.575C8.967 4.501 7 5.43 7 7.12v9.762c0 1.69 1.967 2.618 3.271 1.544l5.927-4.881a2 2 0 0 0 0-3.088l-5.927-4.88Z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                        <div class="text-sm font-medium text-black">competitive analysis</div>
-                    </div>
                 </div>
             </div>
         </div>

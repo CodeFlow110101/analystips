@@ -14,35 +14,35 @@ with(fn() => [
 mount(function () {
     $this->services = [
         'technology-scouting' => [
-            'image' => "humanoid-8722271_1280.webp",
+            'image' => "technologyscouting.jpeg",
             'description' => "Technology Scouting is a systematic search for new and emerging technologies that can enhance or complement a company’s existing product portfolio or business operations. It is a proactive process used to identify innovative solutions, potential partnerships, or acquisition opportunities.",
         ],
         'white-space-analysis' => [
-            'image' => "pexels-olia-danilevich-5088017.jpg",
+            'image' => "whitespaceanalysis.jpeg",
             'description' => 'White Space Analysis is a strategic tool used to identify gaps in the market or technology landscape where no or few patents exist. These "white spaces" represent opportunities for innovation, new product development, or patent filings.'
         ],
         'technology-landscape' => [
-            'image' => "pexels-pixabay-459728.jpg",
+            'image' => "technologylandscape.jpeg",
             'description' => 'Technology Landscape analysis provides a comprehensive overview of the existing technologies in a specific field. It is used to understand the current state of technology, key players, and development trends.'
         ],
         'invalidity-contentions' => [
-            'image' => "pexels-cytonn-955405.jpg",
+            'image' => "invaliditycontentions.jpeg",
             'description' => "Invalidity Contentions involve challenging the validity of a patent by identifying prior art or other grounds that could render the patent invalid. This is commonly used in patent litigation or as a defense strategy against infringement claims."
         ],
         'state-of-the-art-search' => [
-            'image' => "pexels-artempodrez-5726835.jpg",
+            'image' => "stateoftheartsearch.jpeg",
             'description' => "A State of the Art search provides a comprehensive overview of the most advanced technologies, methods, and developments in a particular field at a given time. It is used to establish what is already known and what remains to be discovered."
         ],
         'patent-valuation' => [
-            'image' => "pexels-hillaryfox-1595385.jpg",
+            'image' => "patentvaluation.jpeg",
             'description' => "Patent Valuation is the process of determining the financial value of a patent or a patent portfolio. This valuation is crucial for licensing negotiations, mergers and acquisitions, investment decisions, and litigation."
         ],
         'market-report' => [
-            'image' => "pexels-goumbik-669621.jpg",
+            'image' => "marketreport.jpeg",
             'description' => "Market Reports provide detailed analysis of a specific market, including size, growth trends, key players, and competitive dynamics. These reports are crucial for understanding market opportunities and risks.",
         ],
         'competitive-analysis' => [
-            'image' => "pexels-shkrabaanthony-5816291.jpg",
+            'image' => "competitiveanalysis.jpeg",
             'description' => "Competitive Analysis involves evaluating the strengths and weaknesses of current and potential competitors. It helps companies understand their competitive environment and develop strategies to gain a competitive edge.",
         ],
     ];
@@ -51,12 +51,20 @@ mount(function () {
 ?>
 
 <div>
-    <div class="flex items-center w-full p-4 py-8 sm:p-12 lg:py-36" style="background-image: url('{{ asset('images/pexels-julia-m-cameron-4145190.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-        <div class="rounded-3xl lg:rounded-full bg-pink-500/80 lg:aspect-square text-white flex justify-center items-center max-sm:py-10 max-md:py-10 max-lg:py-32 p-4 sm:p-6">
-            <div class="grid grid-cols-1 gap-6 sm:gap-10 text-balance w-full lg:max-w-md text-center">
-                <div class="text-2xl sm:text-4xl font-semibold">Patent Searches <span class="text-black">Preparation</span></div>
-                <div class="text-lg sm:text-xl font-semibold">Comprehensive Patent Search and Research Reports Delivered</div>
-                <div class="text-xs font-medium sm:text-sm">Exhaustive Patent Research Reports Prepared by an Experienced Team of Attorneys Specializing in Mechanical, Life Sciences, and Engineering Domains.</div>
+    <div class="relative p-4 py-8 sm:p-12 lg:py-36 w-full overflow-hidden">
+        <video class="absolute inset-0 object-cover w-full h-full -z-10" autoplay muted loop>
+            <source src="{{ asset('videos/home.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="h-full w-full flex justify-center items-center">
+            <div class="flex items-center h-full w-full">
+                <div class="rounded-3xl lg:rounded-full bg-pink-500/80 lg:aspect-square text-white flex justify-center items-center max-sm:py-10 max-md:py-10 max-lg:py-32 p-4 sm:p-6">
+                    <div class="grid grid-cols-1 gap-6 sm:gap-10 text-balance w-full lg:max-w-md text-center">
+                        <div class="text-2xl sm:text-4xl font-semibold">Patent Searches <span class="text-black">Preparation</span></div>
+                        <div class="text-lg sm:text-xl font-semibold">Comprehensive Patent Search and Research Reports Delivered</div>
+                        <div class="text-xs font-medium sm:text-sm">Exhaustive Patent Research Reports Prepared by an Experienced Team of Attorneys Specializing in Mechanical, Life Sciences, and Engineering Domains.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -134,7 +142,7 @@ mount(function () {
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-8">
             @foreach($services as $key => $value)
             <div class="grid grid-cols-1 gap-2">
-                <img class="w-full h-64" src="{{ asset('images/'.$value['image']) }}">
+                <img class="w-full h-64" src="{{ asset('page-bg-images/'.$value['image']) }}">
                 <div class="font-semibold text-lg text-amber-500 capitalize"> {{str_replace('-',' ',$key)}}</div>
                 <div class="text-sm leading-6 font-light text-black">{{$value['description']}}</div>
                 <a href="/{{$key}}" wire:navigate class="pt-4">
@@ -359,10 +367,11 @@ mount(function () {
             <div class="text-xl text-black">Our Company is a trusted service provider of high quality Patent search, commited for transparency, ethics and work on client satisfaction.</div>
             <div class="grid grid-cols-1 gap-8 py-12 sm:py-16">
                 <div class="flex items-center overflow-x-auto hide-scrollbar">
-                    <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
-                        @for($i=1; $i<=8; $i++)
-                            <img class="w-24 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}">
-                            @endfor
+                    <div class="flex items-center gap-4">
+                        @for($i=1; $i
+                        <=8; $i++)
+                            <img class="w-24 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}" />
+                        @endfor
                     </div>
                 </div>
             </div>

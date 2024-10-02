@@ -257,21 +257,21 @@ mount(function () {
     ];
 
     $this->bgImage = [
-        'technology-scouting' => "humanoid-8722271_1280.webp",
-        'white-space-analysis' => "pexels-olia-danilevich-5088017.jpg",
-        'technology-landscape' => "pexels-pixabay-459728.jpg",
-        'invalidity-contentions' => "pexels-cytonn-955405.jpg",
-        'state-of-the-art-search' => "pexels-artempodrez-5726835.jpg",
-        'patent-valuation' => "pexels-hillaryfox-1595385.jpg",
-        'market-report' => "pexels-goumbik-669621.jpg",
-        'competitive-analysis' => "pexels-shkrabaanthony-5816291.jpg",
+        'technology-scouting' => "technologyscouting.jpeg",
+        'white-space-analysis' => "whitespaceanalysis.jpeg",
+        'technology-landscape' => "technologylandscape.jpeg",
+        'invalidity-contentions' => "invaliditycontentions.jpeg",
+        'state-of-the-art-search' => "stateoftheartsearch.jpeg",
+        'patent-valuation' => "patentvaluation.jpeg",
+        'market-report' => "marketreport.jpeg",
+        'competitive-analysis' => "competitiveanalysis.jpeg",
     ];
 });
 
 ?>
 
 <div>
-    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/'.$bgImage[$path]) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('page-bg-images/'.$bgImage[$path]) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-black/50 flex justify-center items-center">{{str_replace('-',' ',$path)}}</div>
     </div>
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-20 xl:flex xl:justify-between xl:gap-4">
@@ -291,14 +291,14 @@ mount(function () {
                         <span class="text-lg sm:text-2xl tracking-wide text-amber-500 font-medium capitalize">Who @if($path == 'market-report'){{'Creates'}}@else{{'Performs'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'technology-landscape') {{'Analysis'}}@endif?</span>
                         {{$whoPerforms[$path]}}
                     </div>
-                    <div class="grid grid-cols-1 gap-3 h-min">
+                    <div class="grid grid-cols-1 gap-3 h-min text-justify">
                         <div class="text-lg sm:text-2xl tracking-wide text-amber-500 font-medium capitalize">
                             Benefits of {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif
                         </div>
                         <div class="grid grid-cols-1 gap-4 h-min text-sm font-normal text-black">
                             @foreach($benefits[$path] as $heading => $statement)
-                            <div class="max-sm:text-xs font-medium">
-                                <span class="tracking-wide text-amber-500 text-base font-medium">{{$loop->iteration}}) {{$heading}}: </span>{{$statement}}
+                            <div class="text-xs sm:text-base font-medium">
+                                <span class="text-lg sm:text-2xl tracking-wide text-amber-500 font-medium">{{$loop->iteration}}) {{$heading}}: </span>{{$statement}}
                             </div>
                             @endforeach
                         </div>

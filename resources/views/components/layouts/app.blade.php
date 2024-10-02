@@ -7,6 +7,7 @@
     @vite('resources/css/app.css')
     <title>{{ $title ?? 'Page Title' }}</title>
     <script src="{{asset('js/events.js')}}"></script>
+    <script src="{{asset('js/scroll.js')}}"></script>
 
     <!-- Open Sans Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -25,7 +25,7 @@ mount(function ($id) {
 ?>
 
 <div>
-    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('images/pexels-hillaryfox-1595385.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('page-bg-images/contact.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div class="absolute inset-0 bg-black/50 flex justify-center items-center">News & Blogs</div>
     </div>
     <div class="lg:flex lg:justify-between lg:gap-4 px-4 md:px-12 lg:px-20 xl:px-28 py-20">

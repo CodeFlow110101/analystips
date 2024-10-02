@@ -17,7 +17,7 @@ use function Livewire\Volt\{state};
             <a href="/" wire:navigate class="hover:text-amber-500">HOME</a>
             <a href="/about" wire:navigate class="hover:text-amber-500">ABOUT</a>
             <div class="flex justify-between items-center group/navbar cursor-pointer gap-1 relative">
-                <div class="group-hover/navbar:text-amber-500">SOLUTIONS</div>
+                <div class="group-hover/navbar:text-amber-500">OUR SERVICES</div>
                 <div>
                     <svg class="w-4 h-4 text-gray-800 transition-transform duration-200 group-hover/navbar:rotate-180 group-hover/navbar:text-amber-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m19 9-7 7-7-7" />
