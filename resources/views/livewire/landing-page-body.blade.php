@@ -60,7 +60,7 @@ mount(function () {
             <div class="flex items-center h-full w-full">
                 <div class="rounded-3xl lg:rounded-full bg-pink-500/80 lg:aspect-square text-white flex justify-center items-center max-sm:py-10 max-md:py-10 max-lg:py-32 p-4 sm:p-6">
                     <div class="grid grid-cols-1 gap-6 sm:gap-10 text-balance w-full lg:max-w-md text-center">
-                        <div class="text-2xl sm:text-4xl font-semibold">Patent Searches <span class="text-black">Preparation</span></div>
+                        <div class="text-2xl sm:text-4xl font-semibold">Patent Searches <span class="text-black">Preparation +91 7506228972</span></div>
                         <div class="text-lg sm:text-xl font-semibold">Comprehensive Patent Search and Research Reports Delivered</div>
                         <div class="text-xs font-medium sm:text-sm">Exhaustive Patent Research Reports Prepared by an Experienced Team of Attorneys Specializing in Mechanical, Life Sciences, and Engineering Domains.</div>
                     </div>
