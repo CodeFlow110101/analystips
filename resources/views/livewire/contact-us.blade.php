@@ -20,7 +20,8 @@ $sendMail = function () {
 ?>
 
 <div>
-    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('page-bg-images/contact.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide">
+        <img class="w-full h-full" src="{{ asset('page-bg-images/contact.jpg') }}">
         <div class="absolute inset-0 bg-black/50 flex justify-center items-center">Contact Us</div>
     </div>
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20">

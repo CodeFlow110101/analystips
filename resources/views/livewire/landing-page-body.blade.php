@@ -51,27 +51,19 @@ mount(function () {
 ?>
 
 <div>
-    <div class="relative p-4 py-8 sm:p-12 lg:py-36 w-full overflow-hidden">
+    <div class="relative p-4 py-8 sm:p-12 lg:py-36 w-full bg-black/50 overflow-hidden">
         <video class="absolute inset-0 object-cover w-full h-full -z-10" autoplay muted loop>
             <source src="{{ asset('videos/home.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="h-full w-full flex justify-center items-center">
-            <div class="flex items-center h-full w-full">
-                <div class="rounded-3xl lg:rounded-full bg-pink-500/80 lg:aspect-square text-white flex justify-center items-center max-sm:py-10 max-md:py-10 max-lg:py-32 p-4 sm:p-6">
-                    <div class="grid grid-cols-1 gap-6 sm:gap-10 text-balance w-full lg:max-w-md text-center">
-                        <div class="text-2xl sm:text-4xl font-semibold">Patent Searches <span class="text-black">Preparation +91 7506228972</span></div>
-                        <div class="text-lg sm:text-xl font-semibold">Comprehensive Patent Search and Research Reports Delivered</div>
-                        <div class="text-xs font-medium sm:text-sm">Exhaustive Patent Research Reports Prepared by an Experienced Team of Attorneys Specializing in Mechanical, Life Sciences, and Engineering Domains.</div>
-                    </div>
-                </div>
-            </div>
+        <div class="h-full w-full font-medium flex justify-center items-center text-xl sm:text-3xl py-32 sm:py-48 text-white text-center leading-10">
+            Patent Searches|Preparation <br> Comprehensive Patent Search and Research Reports Delivered
         </div>
     </div>
 
     <div class="bg-gray-100 max-lg:py-12 max-lg:grid max-lg:grid-cols-1 max-lg:gap-16 lg:flex lg:justify-between lg:gap-12 xl:gap-16 items-center px-4 md:px-12 lg:px-20 xl:px-28">
         <div class="lg:w-3/5">
-            <div class="grid grid-cols-1 gap-4 lg:-translate-y-20 bg-white p-6 sm:p-12">
+            <div class="grid grid-cols-1 gap-4 lg:-translate-y-12 bg-white p-6 sm:p-12">
                 <div class="sm:tracking-widest text-amber-500 font-semibold sm:text-lg">Patrisen: Your Trusted Partner in Patent Research and Innovation</div>
                 <div class="text-lg sm:text-2xl tracking-wider uppercase font-bold">what we offer as reliable company</div>
                 <div class="text-sm font-medium text-black sm:leading-6">Patrisen was founded by a team of experienced patent attorneys with a shared vision of providing unparalleled services in patent research and report preparation. Recognizing the need for a specialized platform that delivers high-quality patent search services, Patrisen was established to support Research & Development, Infringement Analysis, and Commercialization efforts for clients across the globe.</div>
@@ -154,64 +146,11 @@ mount(function () {
     </div>
 
     <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8 px-4 md:px-12 lg:px-20 xl:px-28 pt-20 pb-8">
-        <div class="grid grid-cols-1 gap-6 h-min text-justify">
+        <div class="grid grid-cols-1 gap-6 h-min text-justify col-span-2">
             <div class="text-black uppercase font-bold text-lg">Our History</div>
             <div class="text-sm leading-normal font-normal text-black">Patrisen was born out of a need to bridge the gap between high-quality patent research and the growing demands of the global innovation ecosystem. The founding attorneys recognized that many organizations struggled to find a dedicated partner that could provide comprehensive, reliable, and cost-effective patent search services. Thus, Patrisen was established to fill this void.</div>
             <div class="text-sm leading-normal font-normal text-black">From its inception, Patrisen has been committed to delivering excellence in every project. Over the years, we have built a reputation for reliability and precision, becoming the trusted partner for companies, research institutions, and legal professionals seeking robust patent search and research support.</div>
             <div class="text-sm leading-normal font-normal text-black">Our journey continues as we expand our services, continually adapting to the evolving needs of our clients and the dynamic world of intellectual property. At Patrisen, we are more than just a service provider; we are your partner in innovation, dedicated to helping you navigate the patent landscape with confidence and clarity.</div>
-        </div>
-        <div class="grid grid-cols-1 gap-6 h-min">
-            <div class="text-black uppercase font-bold text-lg">What we Offer</div>
-            <div class="grid grid-cols-1 gap-8">
-                <div x-data="{showDropdown : false}">
-                    <div class="flex justify-between items-start gap-4">
-                        <div @click="showDropdown = !showDropdown" :class="showDropdown ? 'bg-amber-500' : 'bg-gray-400'" class="w-min h-min rounded-full p-2 cursor-pointer">
-                            <svg x-show="!showDropdown" class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />
-                            </svg>
-                            <svg x-show="showDropdown" class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
-                            </svg>
-                        </div>
-                        <div class="text-md w-full font-thin text-black grid grid-cols-1 gap-4">
-                            <div class="text-amber-500 font-semibold">Comprehensive Patent Search Services</div>
-                            <div x-show="showDropdown">Exhaustive patent research and report preparation across diverse technical domains.</div>
-                        </div>
-                    </div>
-                </div>
-                <div x-data="{showDropdown : false}">
-                    <div class="flex justify-between items-start gap-4">
-                        <div @click="showDropdown = !showDropdown" :class="showDropdown ? 'bg-amber-500' : 'bg-gray-400'" class="w-min h-min rounded-full p-2 cursor-pointer">
-                            <svg x-show="!showDropdown" class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />
-                            </svg>
-                            <svg x-show="showDropdown" class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
-                            </svg>
-                        </div>
-                        <div class="text-md w-full font-thin text-black grid grid-cols-1 gap-4">
-                            <div class="text-amber-500 font-semibold">Infringement Analysis</div>
-                            <div x-show="showDropdown">Detailed assessments to identify potential patent infringements and protect your intellectual property.</div>
-                        </div>
-                    </div>
-                </div>
-                <div x-data="{showDropdown : false}">
-                    <div class="flex justify-between items-start gap-4">
-                        <div @click="showDropdown = !showDropdown" :class="showDropdown ? 'bg-amber-500' : 'bg-gray-400'" class="w-min h-min rounded-full p-2 cursor-pointer">
-                            <svg x-show="!showDropdown" class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />
-                            </svg>
-                            <svg x-show="showDropdown" class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14" />
-                            </svg>
-                        </div>
-                        <div class="text-md w-full font-thin text-black grid grid-cols-1 gap-4">
-                            <div class="text-amber-500 font-semibold">Commercialization Support</div>
-                            <div x-show="showDropdown">Strategies and guidance to help you monetize your patents effectively.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="grid grid-cols-1 gap-6 h-min">
             <div class="text-black uppercase font-bold text-lg">Skills and Experiences</div>
@@ -261,101 +200,235 @@ mount(function () {
     </div>
 
 
-    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20 h-min grid grid-cols-1 gap-10">
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-16 h-min grid grid-cols-1 gap-10">
         <div class="grid grid-cols-1 gap-4 h-min">
             <div class="text-2xl font-semibold uppercase text-black text-center">Our Process</div>
             <div class="flex justify-center">
                 <div class="border-2 rounded-full h-min w-20 border-amber-500"></div>
             </div>
         </div>
-        <div class="flex justify-center">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
-                <div class="grid grid-cols-1 group gap-6 text-center">
-                    <div class="flex justify-center items-center">
-                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-amber-500">
-                            <div class="bg-gradient-to-tr from-amber-500 to-amber-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-width="1" d="M4.5 17H4a1 1 0 0 1-1-1 3 3 0 0 1 3-3h1m0-3.05A2.5 2.5 0 1 1 9 5.5M19.5 17h.5a1 1 0 0 0 1-1 3 3 0 0 0-3-3h-1m0-3.05a2.5 2.5 0 1 0-2-4.45m.5 13.5h-7a1 1 0 0 1-1-1 3 3 0 0 1 3-3h3a3 3 0 0 1 3 3 1 1 0 0 1-1 1Zm-1-9.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
-                                </svg>
-                            </div>
-                        </div>
+        <div class="inline-flex items-center py-52 max-xl:hidden">
+            <div class="relative rounded-full aspect-square h-12 font-semibold border-4 border-amber-500 text-amber-500 flex justify-center items-center">
+                <div class="text-gray-500">1</div>
+                <div class="absolute bottom-20 h-min grid grid-cols-1 gap-4 -mx-24">
+                    <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M12 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm-1.5 8a4 4 0 0 0-4 4 2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-3Zm6.82-3.096a5.51 5.51 0 0 0-2.797-6.293 3.5 3.5 0 1 1 2.796 6.292ZM19.5 18h.5a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-1.1a5.503 5.503 0 0 1-.471.762A5.998 5.998 0 0 1 19.5 18ZM4 7.5a3.5 3.5 0 0 1 5.477-2.889 5.5 5.5 0 0 0-2.796 6.293A3.501 3.501 0 0 1 4 7.5ZM7.1 12H6a4 4 0 0 0-4 4 2 2 0 0 0 2 2h.5a5.998 5.998 0 0 1 3.071-5.238A5.505 5.505 0 0 1 7.1 12Z" clip-rule="evenodd" />
+                        </svg>
                     </div>
-                    <div class="text-black font-normal uppercase">Initial Consultation and Assessment</div>
+                    <div class="text-center text-gray-700">Initial Consultation and Assessment</div>
                 </div>
-                <div class="grid grid-cols-1 group gap-6 text-center">
-                    <div class="flex justify-center items-center">
-                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-amber-500">
-                            <div class="bg-gradient-to-tr from-amber-500 to-amber-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207" />
-                                </svg>
-                            </div>
-                        </div>
+            </div>
+            <div class="w-full border-2 border-gray-500 h-0"></div>
+            <div class="relative rounded-full aspect-square h-12 font-semibold border-4 border-amber-500 text-amber-500 flex justify-center items-center">
+                <div class="text-gray-500">2</div>
+                <div class="absolute top-20 h-min grid grid-cols-1 gap-4 -mx-24">
+                    <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207" />
+                        </svg>
                     </div>
-                    <div class="text-black font-normal uppercase">Scope Definition and Strategy Development</div>
+                    <div class="text-center text-gray-700">Scope Definition and Strategy Development</div>
                 </div>
-                <div class="grid grid-cols-1 group gap-6 text-center">
-                    <div class="flex justify-center items-center">
-                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-amber-500">
-                            <div class="bg-gradient-to-tr from-amber-500 to-amber-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z" />
-                                </svg>
-                            </div>
-                        </div>
+            </div>
+            <div class="w-full border-2 border-gray-500 h-0"></div>
+            <div class="relative rounded-full aspect-square h-12 font-semibold border-4 border-amber-500 text-amber-500 flex justify-center items-center">
+                <div class="text-gray-500">3</div>
+                <div class="absolute bottom-20 h-min grid grid-cols-1 gap-4 -mx-24">
+                    <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M9 7V2.221a2 2 0 0 0-.5.365L4.586 6.5a2 2 0 0 0-.365.5H9Zm2 0V2h7a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9h5a2 2 0 0 0 2-2Zm-1 9a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Zm2-5a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1Zm4 4a1 1 0 1 0-2 0v3a1 1 0 1 0 2 0v-3Z" clip-rule="evenodd" />
+                        </svg>
                     </div>
-                    <div class="text-black font-normal uppercase">Report Preparation</div>
+                    <div class="text-center text-gray-700">Report Preparation</div>
                 </div>
-                <div class="grid grid-cols-1 group gap-6 text-center">
-                    <div class="flex justify-center items-center">
-                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-amber-500">
-                            <div class="bg-gradient-to-tr from-amber-500 to-amber-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.079 6.839a3 3 0 0 0-4.255.1M13 20h1.083A3.916 3.916 0 0 0 18 16.083V9A6 6 0 1 0 6 9v7m7 4v-1a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1Zm-7-4v-6H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1Zm12-6h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v-6Z" />
-                                </svg>
-                            </div>
-                        </div>
+            </div>
+            <div class="w-full border-2 border-gray-500 h-0"></div>
+            <div class="relative rounded-full aspect-square h-12 font-semibold border-4 border-amber-500 text-amber-500 flex justify-center items-center">
+                <div class="text-gray-500">4</div>
+                <div class="absolute top-20 h-min grid grid-cols-1 gap-4 -mx-24">
+                    <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.079 6.839a3 3 0 0 0-4.255.1M13 20h1.083A3.916 3.916 0 0 0 18 16.083V9A6 6 0 1 0 6 9v7m7 4v-1a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1Zm-7-4v-6H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1Zm12-6h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v-6Z" />
+                        </svg>
                     </div>
-                    <div class="text-black font-normal uppercase">Client Review and Feedback</div>
+                    <div class="text-center text-gray-700">Client Review and Feedback</div>
                 </div>
-                <div class="grid grid-cols-1 group gap-6 text-center">
-                    <div class="flex justify-center items-center">
-                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-amber-500">
-                            <div class="bg-gradient-to-tr from-amber-500 to-amber-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-3 5h3m-6 0h.01M12 16h3m-6 0h.01M10 3v4h4V3h-4Z" />
-                                </svg>
-                            </div>
-                        </div>
+            </div>
+            <div class="w-full border-2 border-gray-500 h-0"></div>
+            <div class="relative rounded-full aspect-square h-12 font-semibold border-4 border-amber-500 text-amber-500 flex justify-center items-center">
+                <div class="text-gray-500">5</div>
+                <div class="absolute bottom-20 h-min grid grid-cols-1 gap-4 -mx-24">
+                    <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M8 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2Zm6 1h-4v2H9a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2h-1V4Zm-3 8a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm-2-1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H9Zm2 5a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm-2-1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H9Z" clip-rule="evenodd" />
+                        </svg>
                     </div>
-                    <div class="text-black font-normal uppercase">Revisions and Finalization</div>
+                    <div class="text-center text-gray-700">Revisions and Finalization</div>
                 </div>
-                <div class="grid grid-cols-1 group gap-6 text-center">
-                    <div class="flex justify-center items-center">
-                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-amber-500">
-                            <div class="bg-gradient-to-tr from-amber-500 to-amber-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
-                                </svg>
-                            </div>
-                        </div>
+            </div>
+            <div class="w-full border-2 border-gray-500 h-0"></div>
+            <div class="relative rounded-full aspect-square h-12 font-semibold border-4 border-amber-500 text-amber-500 flex justify-center items-center">
+                <div class="text-gray-500">6</div>
+                <div class="absolute top-20 h-min grid grid-cols-1 gap-4 -mx-24">
+                    <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 0 0-2 2v9a1 1 0 0 0 1 1h.535a3.5 3.5 0 1 0 6.93 0h3.07a3.5 3.5 0 1 0 6.93 0H21a1 1 0 0 0 1-1v-4a.999.999 0 0 0-.106-.447l-2-4A1 1 0 0 0 19 6h-5a2 2 0 0 0-2-2H4Zm14.192 11.59.016.02a1.5 1.5 0 1 1-.016-.021Zm-10 0 .016.02a1.5 1.5 0 1 1-.016-.021Zm5.806-5.572v-2.02h4.396l1 2.02h-5.396Z" clip-rule="evenodd" />
+                        </svg>
                     </div>
-                    <div class="text-black font-normal uppercase">Delivery and Ongoing Support</div>
+                    <div class="text-center text-gray-700">Delivery and Ongoing Support</div>
                 </div>
-                <div class="grid grid-cols-1 group gap-6 text-center">
-                    <div class="flex justify-center items-center">
-                        <div class="w-min rounded-full border-4 transition-colors border-white group-hover:border-amber-500">
-                            <div class="bg-gradient-to-tr from-amber-500 to-amber-300 rounded-full transition-transform duration-500 group-hover:scale-90 p-6">
-                                <svg class="w-12 h-12 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 15v5m-3 0h6M4 11h16M5 15h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1Z" />
-                                </svg>
-                            </div>
-                        </div>
+            </div>
+            <div class="w-full border-2 border-gray-500 h-0"></div>
+            <div class="relative rounded-full aspect-square h-12 font-semibold border-4 border-amber-500 text-amber-500 flex justify-center items-center">
+                <div class="text-gray-500">7</div>
+                <div class="absolute bottom-20 h-min grid grid-cols-1 gap-4 -mx-20">
+                    <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                        <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M5 3a2 2 0 0 0-2 2v5h18V5a2 2 0 0 0-2-2H5ZM3 14v-2h18v2a2 2 0 0 1-2 2h-6v3h2a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h2v-3H5a2 2 0 0 1-2-2Z" clip-rule="evenodd" />
+                        </svg>
                     </div>
-                    <div class="text-black font-normal uppercase">Continuous Monitoring and Updates</div>
+                    <div class="text-center text-gray-700">Delivery and Ongoing Support</div>
                 </div>
             </div>
         </div>
+
+        <div class="font-semibold xl:hidden">
+            <div class="flex justify-between items-center">
+                <div class="w-full flex justify-end items-center -my-20 pt-14">
+                    <div class="h-min grid grid-cols-1 gap-4">
+                        <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                            <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 6a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm-1.5 8a4 4 0 0 0-4 4 2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-3Zm6.82-3.096a5.51 5.51 0 0 0-2.797-6.293 3.5 3.5 0 1 1 2.796 6.292ZM19.5 18h.5a2 2 0 0 0 2-2 4 4 0 0 0-4-4h-1.1a5.503 5.503 0 0 1-.471.762A5.998 5.998 0 0 1 19.5 18ZM4 7.5a3.5 3.5 0 0 1 5.477-2.889 5.5 5.5 0 0 0-2.796 6.293A3.501 3.501 0 0 1 4 7.5ZM7.1 12H6a4 4 0 0 0-4 4 2 2 0 0 0 2 2h.5a5.998 5.998 0 0 1 3.071-5.238A5.505 5.505 0 0 1 7.1 12Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="text-center text-gray-700">Initial Consultation <br> and Assessment</div>
+                    </div>
+                </div>
+                <div class="w-min">
+                    <div class="rounded-full border-4 border-amber-500 flex justify-center items-center aspect-square h-12">
+                        <div class="text-center text-gray-700">1</div>
+                    </div>
+                </div>
+                <div class="w-full"></div>
+            </div>
+            <div class="w-0 border-2 border-gray-500 h-32 mx-auto"></div>
+            <div class="flex justify-between items-center">
+                <div class="w-full"></div>
+                <div class="w-min">
+                    <div class="rounded-full border-4 border-amber-500 flex justify-center items-center aspect-square h-12">
+                        <div class="text-center text-gray-700">2</div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-start items-center -my-20 pt-14">
+                    <div class="h-min grid grid-cols-1 gap-4">
+                        <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                            <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4.5V19a1 1 0 0 0 1 1h15M7 14l4-4 4 4 5-5m0 0h-3.207M20 9v3.207" />
+                            </svg>
+                        </div>
+                        <div class="text-center text-gray-700">Scope Definition <br> and Strategy Development</div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-0 border-2 border-gray-500 h-32 mx-auto"></div>
+            <div class="flex justify-between items-center">
+                <div class="w-full flex justify-end items-center -my-20 pt-14">
+                    <div class="h-min grid grid-cols-1 gap-4">
+                        <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                            <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M9 7V2.221a2 2 0 0 0-.5.365L4.586 6.5a2 2 0 0 0-.365.5H9Zm2 0V2h7a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9h5a2 2 0 0 0 2-2Zm-1 9a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Zm2-5a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1Zm4 4a1 1 0 1 0-2 0v3a1 1 0 1 0 2 0v-3Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="text-center text-gray-700">Report Preparation</div>
+                    </div>
+                </div>
+                <div class="w-min">
+                    <div class="rounded-full border-4 border-amber-500 flex justify-center items-center aspect-square h-12">
+                        <div class="text-center text-gray-700">3</div>
+                    </div>
+                </div>
+                <div class="w-full"></div>
+            </div>
+            <div class="w-0 border-2 border-gray-500 h-32 mx-auto"></div>
+            <div class="flex justify-between items-center">
+                <div class="w-full"></div>
+                <div class="w-min">
+                    <div class="rounded-full border-4 border-amber-500 flex justify-center items-center aspect-square h-12">
+                        <div class="text-center text-gray-700">4</div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-start items-center -my-20 pt-14">
+                    <div class="h-min grid grid-cols-1 gap-4">
+                        <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                            <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.079 6.839a3 3 0 0 0-4.255.1M13 20h1.083A3.916 3.916 0 0 0 18 16.083V9A6 6 0 1 0 6 9v7m7 4v-1a1 1 0 0 0-1-1h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1Zm-7-4v-6H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1Zm12-6h1a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v-6Z" />
+                            </svg>
+                        </div>
+                        <div class="text-center text-gray-700">Client Review <br> and Feedback</div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-0 border-2 border-gray-500 h-32 mx-auto"></div>
+            <div class="flex justify-between items-center">
+                <div class="w-full flex justify-end items-center -my-20 pt-14">
+                    <div class="h-min grid grid-cols-1 gap-4">
+                        <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                            <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M8 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1h2a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2Zm6 1h-4v2H9a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2h-1V4Zm-3 8a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm-2-1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H9Zm2 5a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm-2-1a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H9Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="text-center text-gray-700">Revisions <br> and Finalization</div>
+                    </div>
+                </div>
+                <div class="w-min">
+                    <div class="rounded-full border-4 border-amber-500 flex justify-center items-center aspect-square h-12">
+                        <div class="text-center text-gray-700">5</div>
+                    </div>
+                </div>
+                <div class="w-full"></div>
+            </div>
+            <div class="w-0 border-2 border-gray-500 h-32 mx-auto"></div>
+            <div class="flex justify-between items-center">
+                <div class="w-full"></div>
+                <div class="w-min">
+                    <div class="rounded-full border-4 border-amber-500 flex justify-center items-center aspect-square h-12">
+                        <div class="text-center text-gray-700">6</div>
+                    </div>
+                </div>
+                <div class="w-full flex justify-start items-center -my-20 pt-14">
+                    <div class="h-min grid grid-cols-1 gap-4">
+                        <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                            <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 0 0-2 2v9a1 1 0 0 0 1 1h.535a3.5 3.5 0 1 0 6.93 0h3.07a3.5 3.5 0 1 0 6.93 0H21a1 1 0 0 0 1-1v-4a.999.999 0 0 0-.106-.447l-2-4A1 1 0 0 0 19 6h-5a2 2 0 0 0-2-2H4Zm14.192 11.59.016.02a1.5 1.5 0 1 1-.016-.021Zm-10 0 .016.02a1.5 1.5 0 1 1-.016-.021Zm5.806-5.572v-2.02h4.396l1 2.02h-5.396Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="text-center text-gray-700">Delivery <br> and Ongoing Support</div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-0 border-2 border-gray-500 h-32 mx-auto"></div>
+            <div class="flex justify-between items-center">
+                <div class="w-full flex justify-end items-center -my-20 pt-14">
+                    <div class="h-min grid grid-cols-1 gap-4">
+                        <div class="bg-amber-500 aspect-square h-12 rounded-xl flex justify-center items-center mx-auto">
+                            <svg class="w-8 h-8 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M5 3a2 2 0 0 0-2 2v5h18V5a2 2 0 0 0-2-2H5ZM3 14v-2h18v2a2 2 0 0 1-2 2h-6v3h2a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h2v-3H5a2 2 0 0 1-2-2Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="text-center text-gray-700">Delivery <br> and Ongoing Support</div>
+                    </div>
+                </div>
+                <div class="w-min">
+                    <div class="rounded-full border-4 border-amber-500 flex justify-center items-center aspect-square h-12">
+                        <div class="text-center text-gray-700">7</div>
+                    </div>
+                </div>
+                <div class="w-full"></div>
+            </div>
+        </div>
+
+
     </div>
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20 flex justify-center">
         <div class="grid grid-cols-1 text-center gap-4">

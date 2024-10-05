@@ -271,7 +271,8 @@ mount(function () {
 ?>
 
 <div>
-    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('page-bg-images/'.$bgImage[$path]) }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide">
+        <img class="w-full h-full" src="{{ asset('page-bg-images/'.$bgImage[$path]) }}">
         <div class="absolute inset-0 bg-black/50 flex justify-center items-center">{{str_replace('-',' ',$path)}}</div>
     </div>
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-20 xl:flex xl:justify-between xl:gap-4">
@@ -395,16 +396,7 @@ mount(function () {
         <div class="text-xl sm:text-3xl capitalize">Additional Information About {{str_replace('-',' ',$path)}} @if($path == 'technology-landscape') Analysis @endif</div>
         <div class="text-sm sm:text-lg tracking-widest">{{$additionalInfo[$path]}}</div>
     </div>
-    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-16">
-        <div class="flex items-center overflow-x-auto hide-scrollbar">
-            <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
-                @for($i=1; $i<=8; $i++)
-                    <img class="w-24 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}">
-                    @endfor
-            </div>
-        </div>
-    </div>
-    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16 text-black">
+    <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-10 sm:py-16 text-amber-500">
         <div class="text-lg sm:text-2xl font-semibold capitalize">Why @if($path == 'market-report'){{'Choose our'}}@else{{'Do'}}@endif {{str_replace('-',' ',$path)}}@if($path == 'market-report'){{'s'}}@endif @if($path == 'technology-landscape') Analysis @endif @if($path != 'market-report'){{'with Us'}}@endif?</div>
         <div class="h-min grid grid-cols-1 gap-4 font-semibold">
             @foreach($whyChooseUs[$path] as $heading => $statement)
@@ -415,7 +407,7 @@ mount(function () {
                     </svg>
                 </div>
                 <div class="text-xs sm:text-base md:text-lg lg:text-xl text-amber-500 font-semibold whitespace-nowrap">{{$heading}} :</div>
-                <div class="text-xs sm:text-sm md:text-lg lg:text-xl max-sm:tracking-tighter w-full items-center font-medium text-black">
+                <div class="text-xs sm:text-base max-sm:tracking-tighter w-full items-center font-medium text-black">
                     {{$statement}}
                 </div>
             </div>

@@ -7,7 +7,8 @@ use function Livewire\Volt\{state};
 ?>
 
 <div>
-    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide" style="background-image: url('{{ asset('page-bg-images/about.jpeg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide">
+        <img class="w-full h-full" src="{{ asset('page-bg-images/about.jpeg') }}">
         <div class="absolute inset-0 bg-black/50 flex justify-center items-center">Practice Domain</div>
     </div>
     <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-28 grid grid-cols-1 gap-36">
@@ -122,25 +123,6 @@ use function Livewire\Volt\{state};
                 <div>
                     <div class="font-semibold text-base sm:text-xl text-text-black">Entertainment</div>
                     <div class="text-text-black max-sm:text-sm">Innovating the Method of Entertainment are Challenging the Frontiers of Patent and IP Law in Unexpected</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="px-10 py-20 flex justify-center">
-        <div class="grid grid-cols-1 text-center gap-4">
-            <div class="text-base sm:text-lg text-black font-semibold uppercase">Our clients</div>
-            <div class="text-lg sm:text-4xl font-semibold uppercase text-text-black">Trusted Companies</div>
-            <div class="flex justify-center">
-                <div class="border-2 rounded-full h-min w-20 border-amber-500"></div>
-            </div>
-            <div class="text-base sm:text-xl px-4 md:px-12 lg:px-20 xl:px-28 text-text-black">Our Company is a trusted service provider of high quality Patent search, commited for transparency, ethics and work on client satisfaction.</div>
-            <div class="grid grid-cols-1 gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-16">
-                <div class="flex items-center overflow-x-auto hide-scrollbar">
-                    <div class="flex items-center space-x-4 animate-scroll animate-auto-scroll">
-                        @for($i=1; $i<=8; $i++)
-                            <img class="w-24 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}">
-                            @endfor
-                    </div>
                 </div>
             </div>
         </div>
