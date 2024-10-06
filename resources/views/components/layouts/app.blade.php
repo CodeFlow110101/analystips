@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/css/app.css')
     <title>{{ 'Patrisen' }}</title>
-    <link rel="icon" class="rounded-full" type="image/x-icon" href="{{ asset('images/Patrisen_favicon(1).png') }}">
+    <link rel="icon" class="rounded-full" type="image/x-icon" href="{{ asset('images/Patrisen_favicon.png') }}">
     <script src="{{asset('js/events.js')}}"></script>
     <script src="{{asset('js/scroll.js')}}"></script>
 

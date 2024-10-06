@@ -16,34 +16,42 @@ mount(function () {
         'technology-scouting' => [
             'image' => "technologyscouting.jpeg",
             'description' => "Technology Scouting is a systematic search for new and emerging technologies that can enhance or complement a company’s existing product portfolio or business operations. It is a proactive process used to identify innovative solutions, potential partnerships, or acquisition opportunities.",
+            'lg-id' => '1'
         ],
         'white-space-analysis' => [
             'image' => "whitespaceanalysis.jpeg",
-            'description' => 'White Space Analysis is a strategic tool used to identify gaps in the market or technology landscape where no or few patents exist. These "white spaces" represent opportunities for innovation, new product development, or patent filings.'
+            'description' => 'White Space Analysis is a strategic tool used to identify gaps in the market or technology landscape where no or few patents exist. These "white spaces" represent opportunities for innovation, new product development, or patent filings.',
+            'lg-id' => null
         ],
         'technology-landscape' => [
             'image' => "technologylandscape.jpeg",
-            'description' => 'Technology Landscape analysis provides a comprehensive overview of the existing technologies in a specific field. It is used to understand the current state of technology, key players, and development trends.'
+            'description' => 'Technology Landscape analysis provides a comprehensive overview of the existing technologies in a specific field. It is used to understand the current state of technology, key players, and development trends.',
+            'lg-id' => null
         ],
         'invalidity-contentions' => [
             'image' => "invaliditycontentions.jpeg",
-            'description' => "Invalidity Contentions involve challenging the validity of a patent by identifying prior art or other grounds that could render the patent invalid. This is commonly used in patent litigation or as a defense strategy against infringement claims."
+            'description' => "Invalidity Contentions involve challenging the validity of a patent by identifying prior art or other grounds that could render the patent invalid. This is commonly used in patent litigation or as a defense strategy against infringement claims.",
+            'lg-id' => '2'
         ],
         'state-of-the-art-search' => [
             'image' => "stateoftheartsearch.jpeg",
-            'description' => "A State of the Art search provides a comprehensive overview of the most advanced technologies, methods, and developments in a particular field at a given time. It is used to establish what is already known and what remains to be discovered."
+            'description' => "A State of the Art search provides a comprehensive overview of the most advanced technologies, methods, and developments in a particular field at a given time. It is used to establish what is already known and what remains to be discovered.",
+            'lg-id' => null
         ],
         'patent-valuation' => [
             'image' => "patentvaluation.jpeg",
-            'description' => "Patent Valuation is the process of determining the financial value of a patent or a patent portfolio. This valuation is crucial for licensing negotiations, mergers and acquisitions, investment decisions, and litigation."
+            'description' => "Patent Valuation is the process of determining the financial value of a patent or a patent portfolio. This valuation is crucial for licensing negotiations, mergers and acquisitions, investment decisions, and litigation.",
+            'lg-id' => null
         ],
         'market-report' => [
             'image' => "marketreport.jpeg",
             'description' => "Market Reports provide detailed analysis of a specific market, including size, growth trends, key players, and competitive dynamics. These reports are crucial for understanding market opportunities and risks.",
+            'lg-id' => '3'
         ],
         'competitive-analysis' => [
             'image' => "competitiveanalysis.jpeg",
             'description' => "Competitive Analysis involves evaluating the strengths and weaknesses of current and potential competitors. It helps companies understand their competitive environment and develop strategies to gain a competitive edge.",
+            'lg-id' => null
         ],
     ];
 });
@@ -430,7 +438,7 @@ mount(function () {
 
 
     </div>
-    <div class="px-4 md:px-12 lg:px-20 xl:px-28 py-20 flex justify-center">
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 pt-20 flex justify-center">
         <div class="grid grid-cols-1 text-center gap-4">
             <div class="text-sm text-black font-semibold uppercase">Our clients</div>
             <div class="text-2xl font-semibold uppercase text-black">Trusted Companies</div>
@@ -439,11 +447,11 @@ mount(function () {
             </div>
             <div class="text-xl text-black">Our Company is a trusted service provider of high quality Patent search, commited for transparency, ethics and work on client satisfaction.</div>
             <div class="grid grid-cols-1 gap-8 py-12 sm:py-16">
-                <div class="flex items-center overflow-x-auto hide-scrollbar">
-                    <div class="flex items-center gap-4">
+                <div x-data="slider" x-init="scroll()" class="w-full">
+                    <div x-ref="sliderContainer" class="inline-flex overflow-x-auto hide-scrollbar items-center gap-4">
                         @for($i=1; $i
                         <=8; $i++)
-                            <img class="w-24 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}" />
+                            <img class="sm:w-24 sm:h-40 md:w-40 xl:w-60" src="{{asset('images/trusted_companies_'.$i.'.png')}}" />
                         @endfor
                     </div>
                 </div>
