@@ -26,7 +26,7 @@ mount(function ($id) {
 
 <div>
     <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide">
-        <img class="w-full h-full" src="{{ asset('page-bg-images/contact.jpg') }}">
+        <img class="w-full h-full" src="{{ asset('page-bg-images/blog.jpeg') }}">
         <div class="absolute inset-0 bg-black/50 flex justify-center items-center">News & Blogs</div>
     </div>
     <div class="lg:flex lg:justify-between lg:gap-4 px-4 md:px-12 lg:px-20 xl:px-28 py-20">
