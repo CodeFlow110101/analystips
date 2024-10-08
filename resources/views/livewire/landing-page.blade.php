@@ -61,6 +61,8 @@ mount(function () {
     <livewire:contact-us />
     @elseif($path == 'blog')
     <livewire:blog :id="$blog_id" />
+    @elseif($path == 'testimonial')
+    <livewire:testimonial />
     @endif
     <livewire:footer />
     @endif
