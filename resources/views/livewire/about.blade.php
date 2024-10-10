@@ -7,7 +7,7 @@ use function Livewire\Volt\{state};
 ?>
 
 <div>
-    <div class="relative h-96 xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide">
+    <div class="relative h-96 xl:h-[35rem] xl:mt-24 uppercase text-white text-xl sm:text-4xl font-light tracking-wide">
         <img class="w-full h-full" src="{{ asset('page-bg-images/about.jpeg') }}">
         <div class="absolute inset-0 bg-black/50 flex justify-center items-center">About us</div>
     </div>
