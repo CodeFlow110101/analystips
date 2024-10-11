@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css','resources/js/app.js')
+    @vite('resources/css/app.css')
     <title>{{ 'Patrisen' }}</title>
     <link rel="icon" class="rounded-full" type="image/x-icon" href="{{ asset('images/Patrisen_favicon.png') }}">
     <script src="{{asset('js/events.js')}}"></script>
