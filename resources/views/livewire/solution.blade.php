@@ -299,7 +299,7 @@ mount(function () {
                         <div class="grid grid-cols-1 gap-4 h-min text-sm font-normal text-black">
                             @foreach($benefits[$path] as $heading => $statement)
                             <div class="text-xs sm:text-base font-medium">
-                                <span class="text-lg sm:text-2xl tracking-wide text-amber-500 font-medium">{{$loop->iteration}}) {{$heading}}: </span>{{$statement}}
+                                <span class="tracking-wide text-amber-500 font-medium">{{$loop->iteration}}) {{$heading}}: </span>{{$statement}}
                             </div>
                             @endforeach
                         </div>
@@ -334,7 +334,7 @@ mount(function () {
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 px-4 md:px-12 lg:px-20 xl:px-28 py-12 sm:py-20">
         <div class="grid grid-cols-1 gap-6 h-min">
-            <div class="text-black uppercase font-bold text-base sm:text-lg">What We Can Do for You?</div>
+            <div class="text-amber-500 uppercase font-bold text-base sm:text-lg">What We Can Do for You?</div>
             <div class="grid grid-cols-1 gap-8">
                 @foreach($whatWeDo[$path] as $heading => $statement)
                 <div x-data="{showDropdown : false}">
@@ -349,7 +349,7 @@ mount(function () {
                         </div>
                         <div class="text-md w-full items-center font-thin text-black grid grid-cols-1 gap-1 sm:gap-4">
                             <div class="text-base sm:text-xl text-amber-500 font-semibold">{{$heading}}</div>
-                            <div x-show="showDropdown" class="max-sm:text-xs font-medium">{{$statement}}</div>
+                            <div x-show="showDropdown" x-collapse class="max-sm:text-xs font-medium">{{$statement}}</div>
                         </div>
                     </div>
                 </div>
@@ -357,7 +357,7 @@ mount(function () {
             </div>
         </div>
         <div class="grid grid-cols-1 gap-6 h-min">
-            <div class="text-black uppercase font-bold text-lg">Skills and Experiences</div>
+            <div class="text-amber-500 uppercase font-bold text-lg">Skills and Experiences</div>
             <div class="grid grid-cols-1 gap-8 h-min">
                 <div class="grid grid-cols-1 gap-2">
                     <div class="w-full h-min bg-transparent rounded-full grid grid-cols-1 gap-2">
