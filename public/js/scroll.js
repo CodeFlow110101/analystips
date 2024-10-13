@@ -1,4 +1,4 @@
-function slider() {
+function companiesScroll() {
   return {
     interval: null,
     direction: "right",
@@ -23,6 +23,44 @@ function slider() {
         }
       }, 16); // 60fps
       this.interval = intervalId;
+    },
+    destroy() {
+      clearInterval(this.interval);
+    }
+  };
+}
+
+function testinomialsScroll() {
+  return {
+    interval: null,
+    index: 0,
+    initialScroll: 0,
+    init() {
+      const container = this.$refs.testinomailsSliderContainer;
+      this.initialScroll = this.$refs.div1.clientWidth * 2;
+
+      container.scroll({
+        left: this.initialScroll
+      });
+
+      const intervalId = setInterval(() => {
+        this.changeIndex();
+      }, 5000);
+    },
+    changeIndex() {
+      if (this.index < 2) {
+        this.index++;
+      } else {
+        this.index = 0;
+      }
+    },
+    scroll() {
+      const container = this.$refs.testinomailsSliderContainer;
+
+      container.scroll({
+        left: this.initialScroll + this.$refs.div1.clientWidth * this.index,
+        behavior: "smooth"
+      });
     },
     destroy() {
       clearInterval(this.interval);

@@ -464,8 +464,8 @@ mount(function () {
                 <div class="border-2 rounded-full h-min w-20 border-amber-500"></div>
             </div>
             <div class="text-xl text-black">Our Company is a trusted service provider of high quality Patent search, commited for transparency, ethics and work on client satisfaction.</div>
-            <div class="grid grid-cols-1 gap-8 py-12 sm:py-16">
-                <div x-data="slider" x-init="scroll()" class="w-full">
+            <div class="grid grid-cols-1 gap-8 py-12 sm:py-16 pointer-events-none">
+                <div x-data="companiesScroll" x-init="scroll()" class="w-full">
                     <div x-ref="sliderContainer" class="inline-flex overflow-x-auto hide-scrollbar items-center gap-4">
                         @for($i=1; $i
                         <=8; $i++)
@@ -477,7 +477,7 @@ mount(function () {
         </div>
     </div>
 
-    <div class="px-4 md:px-12 lg:px-20 xl:px-28 pt-20 flex justify-center">
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 pt-20 flex justify-center hidden">
         <div class="grid grid-cols-1 text-center gap-4">
             <div class="text-sm text-black font-semibold uppercase">Our clients</div>
             <div class="text-2xl font-semibold uppercase text-black">Testinomials</div>
@@ -499,6 +499,72 @@ mount(function () {
                         {{$testinomial['statement']}}
                     </div>
                     <div class="font-bold text-xl pt-2">{{$testinomial['company']}}</div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 md:px-12 lg:px-20 xl:px-28 pt-20 flex justify-center">
+        <div class="grid grid-cols-1 text-center gap-4 w-full">
+            <div class="text-sm text-black font-semibold uppercase">Our clients</div>
+            <div class="text-2xl font-semibold uppercase text-black">Testinomials</div>
+            <div class="flex justify-center">
+                <div class="border-2 rounded-full h-min w-20 border-amber-500"></div>
+            </div>
+            <div x-data="testinomialsScroll" x-ref="testinomailsSliderContainer" x-init='$watch(" index", value=> scroll());' class="py-24 flex h-min text-center w-full overflow-x-hidden">
+                @foreach($testinomials as $testinomial)
+                <div class="flex-shrink-0 max-lg:w-full lg:basis-1/3 px-10 lg:scale-90">
+                    <div class="grid grid-cols-1 gap-4 sm:gap-3 rounded-full border-4 border-amber-500 py-8 sm:py-6 px-8 transition-colors duration-500 text-gray-700 ">
+                        <div class="flex justify-center">
+                            <svg class="w-16 h-16 text-gray-800 duration-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-xl">
+                            {{$testinomial['name']}}
+                        </div>
+                        <div class="tracking-wider font-semibold text-xs">
+                            {{$testinomial['statement']}}
+                        </div>
+                        <div class="font-bold text-lg pt-2">{{$testinomial['company']}}</div>
+                    </div>
+                </div>
+                @endforeach
+                @foreach($testinomials as $testinomial)
+                <div x-ref="div{{$loop->iteration}}" class="flex-shrink-0 max-lg:w-full lg:basis-1/3 px-10">
+                    <div :class="(index + 1) == {{$loop->iteration}} ? 'lg:scale-125 lg:bg-amber-500 lg:text-white' : 'lg:scale-90 text-gray-700'" class="grid grid-cols-1 gap-4 sm:gap-3 rounded-full border-4 border-amber-500 py-8 sm:py-6 px-8 transition-colors transition-transform duration-500">
+                        <div class="flex justify-center">
+                            <svg :class="(index + 1) == {{$loop->iteration}} ? 'text-white' : 'text-gray-800'" class="w-16 h-16 transition-colors duration-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-xl">
+                            {{$testinomial['name']}}
+                        </div>
+                        <div class="tracking-wider font-semibold text-xs">
+                            {{$testinomial['statement']}}
+                        </div>
+                        <div class="font-bold text-lg pt-2">{{$testinomial['company']}}</div>
+                    </div>
+                </div>
+                @endforeach
+                @foreach($testinomials as $testinomial)
+                <div class="flex-shrink-0 max-lg:w-full lg:basis-1/3 px-10 lg:scale-90">
+                    <div class="grid grid-cols-1 gap-4 sm:gap-3 rounded-full border-4 border-amber-500 py-8 sm:py-6 px-8 transition-colors duration-500 text-gray-700 ">
+                        <div class="flex justify-center">
+                            <svg class="w-16 h-16 text-gray-800 duration-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd" d="M12 20a7.966 7.966 0 0 1-5.002-1.756l.002.001v-.683c0-1.794 1.492-3.25 3.333-3.25h3.334c1.84 0 3.333 1.456 3.333 3.25v.683A7.966 7.966 0 0 1 12 20ZM2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 5.5-4.44 9.963-9.932 10h-.138C6.438 21.962 2 17.5 2 12Zm10-5c-1.84 0-3.333 1.455-3.333 3.25S10.159 13.5 12 13.5c1.84 0 3.333-1.455 3.333-3.25S13.841 7 12 7Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div class="font-semibold text-xl">
+                            {{$testinomial['name']}}
+                        </div>
+                        <div class="tracking-wider font-semibold text-xs">
+                            {{$testinomial['statement']}}
+                        </div>
+                        <div class="font-bold text-lg pt-2">{{$testinomial['company']}}</div>
+                    </div>
                 </div>
                 @endforeach
             </div>
