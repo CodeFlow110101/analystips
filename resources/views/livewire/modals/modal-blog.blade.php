@@ -4,12 +4,11 @@ use App\Models\Blog;
 
 use function Livewire\Volt\{state, on, rules, mount};
 
-state(['id', 'title', 'description']);
+state(['id', 'title', 'description', 'heading']);
 
-rules(['title' => 'required|min:3', 'description' => 'required|min:6']);
+rules(['title' => 'required|min:3', 'heading' => 'required|min:6', 'description' => 'required|min:6']);
 
 on(['blog-submit' => function ($validationKey, $validationMessage, $imageName, $imagePath) {
-
     $this->resetValidation();
 
     if ($validationKey && $validationKey['image']) {
@@ -32,11 +31,13 @@ on(['blog-submit' => function ($validationKey, $validationMessage, $imageName, $
             Blog::where('id', $this->id)->update([
                 'title' => $this->title,
                 'description' => $this->description,
+                'heading' => $this->heading,
             ]);
         } else {
             Blog::create([
                 'title' => $this->title,
                 'description' => $this->description,
+                'heading' => $this->heading,
                 'image' => $imagePath,
             ]);
         }
@@ -48,7 +49,7 @@ on(['blog-submit' => function ($validationKey, $validationMessage, $imageName, $
 
 ?>
 
-<div class="w-1/2 bg-white rounded-lg p-6 h-min grid grid-cols-1 gap-12">
+<div class="w-1/2 bg-white rounded-lg max-h-screen overflow-y-auto p-6 h-min grid grid-cols-1 gap-12">
     <div class="text-xl flex justify-between items-center text-gray-800">
         <div class="font-semibold text-gray-800">Blog</div>
         <div wire:click="$dispatch('hide-modal')" class="group hover:bg-gray-500 p-1 rounded-full h-min">
@@ -64,8 +65,13 @@ on(['blog-submit' => function ($validationKey, $validationMessage, $imageName, $
             <div class="text-red-500 text-semibold">@error('title'){{$message}}@enderror</div>
         </div>
         <div class="grid grid-cols-1 gap-2 h-min">
+            <div class="">Heading</div>
+            <textarea wire:model="heading" rows="4" class="text-sm p-2.5 w-full bg-gray-200 rounded-lg outline-none" placeholder="Heading"></textarea>
+            <div class="text-red-500 text-semibold">@error('heading'){{$message}}@enderror</div>
+        </div>
+        <div class="grid grid-cols-1 gap-2 h-min">
             <div class="">Description</div>
-            <textarea wire:model="description" rows="4" class="text-sm p-2.5 w-full bg-gray-200 rounded-lg outline-none" placeholder="Description"></textarea>
+            <trix-editor x-on:trix-change="$wire.description = $event.target.value"></trix-editor>
             <div class="text-red-500 text-semibold">@error('description'){{$message}}@enderror</div>
         </div>
         <div class="grid grid-cols-1 gap-2 h-min">

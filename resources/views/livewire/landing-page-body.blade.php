@@ -590,7 +590,7 @@ mount(function () {
                     </div>
                     <div>{{ \Carbon\Carbon::parse($blog->created_at)->format('d F Y') }}</div>
                 </div>
-                <div class="text-sm leading-6 font-light text-black">{{Str::limit($blog->description, 150)}}</div>
+                <div class="text-sm leading-6 font-light text-black">{{Str::limit($blog->heading, 150)}}</div>
                 <div class="pt-4">
                     <a href="/blog?id={{$blog->id}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</a>
                 </div>

@@ -47,7 +47,13 @@ mount(function ($id) {
                     </div>
                     <div>{{ \Carbon\Carbon::parse($blog->created_at)->format('d F Y') }}</div>
                 </div>
-                <div class="overflow-y-auto max-h-56 text-xs leading-6 font-medium">{{$id ? $blog->description : Str::limit($blog->description, 400)}}</div>
+                <div class="leading-6 @if($id) text-base @else text-sm @endif font-medium">
+                    @if($id)
+                    {!!$blog->description!!}
+                    @else
+                    {{Str::limit($blog->heading, 400)}}
+                    @endif
+                </div>
                 @if(!$this->id)
                 <div>
                     <a href="/blog?id={{$blog->id}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</a>

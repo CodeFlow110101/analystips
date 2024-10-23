@@ -11,5 +11,5 @@ class Blog extends Model
 
     protected $table = "blogs";
 
-    protected $fillable = ['title', 'description', 'image'];
+    protected $fillable = ['title', 'description', 'image', 'heading'];
 }

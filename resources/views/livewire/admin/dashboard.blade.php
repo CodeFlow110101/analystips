@@ -73,7 +73,10 @@ mount(function (Request $request) {
                 <div>
                     {{$blog->title}}
                 </div>
-                <div class="overflow-y-auto max-h-56">{{$blog->description}}</div>
+                <div>
+                    {{$blog->heading}}
+                </div>
+                <div class="overflow-y-auto max-h-56">{!!$blog->description!!}</div>
                 <div class="flex justify-center">
                     <div wire:click="deleteBlog({{$blog->id}})" class="rounded-full cursor-pointer p-4 group hover:bg-gray-500">
                         <svg class="w-6 h-6 text-gray-500 group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
