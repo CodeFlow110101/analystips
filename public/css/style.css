@@ -34,3 +34,18 @@
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
 }
+
+/* Hide the file attachment button */
+.trix-button-group--file-tools {
+  display: none;
+}
+
+/* Hide the link button */
+.trix-button-group--text-tools [data-trix-action="link"] {
+  display: none;
+}
+
+/* Hide the file attachment button by targeting its action attribute */
+.trix-button-group [data-trix-action="attachFiles"] {
+  display: none;
+}

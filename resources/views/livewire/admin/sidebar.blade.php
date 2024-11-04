@@ -8,10 +8,6 @@ use function Livewire\Volt\{mount, state};
 
 state(['user']);
 
-$redirectTo = function ($path) {
-    $this->redirectRoute($path, navigate: true);
-};
-
 $signOut = function (Request $request) {
     Auth::logout();
     $request->session()->invalidate();
@@ -25,9 +21,9 @@ mount(function () {
 ?>
 
 <div :class="toggleSidebar ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-72'"
-    class="w-full max-lg:transition-transform max-lg:duration-300 flex justify-center items-center rounded-2xl bg-gray-200">
+    class="w-full max-lg:transition-transform max-lg:duration-300 flex justify-center items-center rounded-2xl shadow shadow-black/30">
     <div class="grid grid-cols-1 gap-4 w-4/5 px-1 my-12">
-        <div wire:click="redirectTo('dashboard')" class="flex justify-between gap-2 p-4 rounded-lg hover:bg-sky-400">
+        <a href="/admin-blogs" wire:navigate class="flex justify-between gap-2 p-4 rounded-lg hover:bg-sky-400">
             <div class="w-min">
                 <svg class="w-6 h-6 text-indigo-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                     viewBox="0 0 24 24">
@@ -36,16 +32,16 @@ mount(function () {
                 </svg>
             </div>
             <div class="w-full text-gray-800">Dashboard</div>
-        </div>
-        <div class="flex justify-between gap-2 p-4 rounded-lg hover:bg-sky-400">
+        </a>
+        <a href="/add-blog" wire:navigate class="flex justify-between gap-2 p-4 rounded-lg hover:bg-sky-400">
             <div class="w-min">
                 <svg class="w-6 h-6 text-orange-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13v-2a1 1 0 0 0-1-1h-.757l-.707-1.707.535-.536a1 1 0 0 0 0-1.414l-1.414-1.414a1 1 0 0 0-1.414 0l-.536.535L14 4.757V4a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v.757l-1.707.707-.536-.535a1 1 0 0 0-1.414 0L4.929 6.343a1 1 0 0 0 0 1.414l.536.536L4.757 10H4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h.757l.707 1.707-.535.536a1 1 0 0 0 0 1.414l1.414 1.414a1 1 0 0 0 1.414 0l.536-.535 1.707.707V20a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-.757l1.707-.708.536.536a1 1 0 0 0 1.414 0l1.414-1.414a1 1 0 0 0 0-1.414l-.535-.536.707-1.707H20a1 1 0 0 0 1-1Z" />
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                 </svg>
             </div>
-            <div class="w-full text-gray-800">Settings</div>
-        </div>
+            <div class="w-full text-gray-800">Create Blog</div>
+        </a>
         <div wire:click="signOut" class="flex justify-between gap-2 p-4 rounded-lg hover:bg-sky-400">
             <div class="w-min">
                 <svg class="w-6 h-6 text-red-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24"

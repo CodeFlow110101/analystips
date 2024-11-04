@@ -17,7 +17,7 @@ $signIn = function (Request $request) {
     $this->validate();
     if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
         $request->session()->regenerate();
-        $this->redirectRoute('dashboard', navigate: true);
+        $this->redirectRoute('admin-blogs', navigate: true);
     } else {
     }
 };

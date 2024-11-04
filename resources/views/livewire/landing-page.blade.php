@@ -13,18 +13,18 @@ state(['path', 'blog_id']);
 mount(function () {
     $this->path = request()->path();
 
-    if (in_array($this->path, ['login', 'dashboard'])) {
-        if ($this->path == 'dashboard' && !Auth::check()) {
+    if (in_array($this->path, ['login', 'admin-blogs'])) {
+        if (in_array($this->path, ['admin-blogs', 'add-blog']) && !Auth::check()) {
             return $this->redirectRoute('login', navigate: true);
         } elseif ($this->path == 'login' && Auth::check()) {
-            return $this->redirectRoute('dashboard', navigate: true);
+            return $this->redirectRoute('admin-blogs', navigate: true);
         }
     }
 
-    if ($this->path == 'blog' && request()->has('id')) {
+    if ($this->path == 'blog' && session()->has('blogId')) {
 
-        if (Blog::where('id', request('id'))->exists()) {
-            $this->blog_id = request('id');
+        if (Blog::where('id', session()->get('blogId'))->exists()) {
+            $this->blog_id = session()->get('blogId');
         } else {
             return $this->redirectRoute('blog', navigate: true);
         }
@@ -33,11 +33,11 @@ mount(function () {
 ?>
 
 <div>
-    @if(in_array($path,['login','dashboard']))
+    @if(in_array($path,['login','admin-blogs','add-blog']))
 
     @if($path == 'login')
     <livewire:admin.login />
-    @elseif($path == 'dashboard')
+    @elseif(in_array($path , ['admin-blogs' , 'add-blog']))
     <livewire:admin.dashboard />
     @endif
 
