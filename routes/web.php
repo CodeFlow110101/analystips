@@ -12,6 +12,7 @@ Volt::route('/login', 'landing-page')->name('login');
 Volt::route('/admin-blogs', 'landing-page')->name('admin-blogs');
 Volt::route('/add-blog', 'landing-page')->name('add-blog');
 Volt::route('/blog', 'landing-page')->name('blog');
+Volt::route('/{blogTitle}', 'landing-page');
 Volt::route('/terms-and-conditions', 'landing-page')->name('terms-and-conditions');
 Volt::route('/privacy-policy', 'landing-page')->name('privacy-policy');
 Volt::route('/contact-us', 'landing-page')->name('contact-us');

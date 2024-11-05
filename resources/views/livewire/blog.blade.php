@@ -17,10 +17,10 @@ with(fn() => [
     'recent_blogs' => Blog::orderBy('created_at', 'desc')->get()->take(5)
 ]);
 
-$redirectToBlog = function ($id) {
-    session()->flash('blogId', $id);
-    return $this->redirectRoute('blog', navigate: true);
-};
+// $redirectToBlog = function ($id) {
+//     session()->flash('blogId', $id);
+//     return $this->redirectRoute('blog', navigate: true);
+// };
 
 mount(function ($id) {
     if ($id) {
@@ -42,9 +42,9 @@ mount(function ($id) {
                 <div class="flex justify-center">
                     <img src="{{asset('storage/'.$blog->image)}}" class="w-auto h-64">
                 </div>
-                <div wire:click="redirectToBlog({{$blog->id}})" class="hover:text-amber-500 cursor-pointer">
+                <a href="/{{$blog->url}}" wire:navigate class="hover:text-amber-500 cursor-pointer">
                     {{$blog->title}}
-                </div>
+                </a>
                 <div class="text-sm text-gray-400 font-medium w-min whitespace-nowrap flex justify-center gap-2 items-center">
                     <div>
                         <svg class="w-4 h-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ mount(function ($id) {
                 </div>
                 @if(!$this->id)
                 <div>
-                    <div wire:click="redirectToBlog({{$blog->id}})" class="text-center font-light text-white text-sm uppercase bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</div>
+                    <a href="/{{$blog->url}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</a>
                 </div>
                 @endif
             </div>
@@ -84,7 +84,7 @@ mount(function ($id) {
             </div>
             <div class="h-min text-left grid grid-cols-1 gap-4">
                 @foreach($recent_blogs as $blog)
-                <div wire:click="redirectToBlog({{$blog->id}})" class="hover:text-amber-500 text-gray-800 font-semibold cursor-pointer">{{$blog->title}}</div>
+                <a href="/{{$blog->url}}" wire:navigate class="hover:text-amber-500 text-gray-800 font-semibold cursor-pointer">{{$blog->title}}</a>
                 @endforeach
             </div>
         </div>

@@ -24,7 +24,7 @@ $deleteBlog = function ($id) {
 <div>
     <div class="h-min grid grid-cols-2 gap-4">
         @foreach($blogs as $blog)
-        <div class="p-4 bg-gray-200 rounded-lg h-min grid grid-cols-1 gap-4 text-gray-800 font-semibold">
+        <div class="p-4 shadow shadow-black/30 rounded-lg h-min grid grid-cols-1 gap-4 text-gray-800 font-semibold">
             <div class="flex justify-center"><img src="{{asset('storage/'.$blog->image)}}" class="w-auto h-64 rounded-lg"></div>
             <div>
                 {{$blog->title}}

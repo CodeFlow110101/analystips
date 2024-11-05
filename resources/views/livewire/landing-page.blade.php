@@ -8,7 +8,7 @@ use function Livewire\Volt\{layout, state, mount};
 
 layout('components.layouts.app');
 
-state(['path', 'blog_id']);
+state(['path', 'blog_id', 'blogUrls']);
 
 mount(function () {
     $this->path = request()->path();
@@ -21,13 +21,10 @@ mount(function () {
         }
     }
 
-    if ($this->path == 'blog' && session()->has('blogId')) {
+    $this->blogUrls = Blog::get()->pluck('url')->toArray();
 
-        if (Blog::where('id', session()->get('blogId'))->exists()) {
-            $this->blog_id = session()->get('blogId');
-        } else {
-            return $this->redirectRoute('blog', navigate: true);
-        }
+    if (in_array($this->path, $this->blogUrls)) {
+        $this->blog_id = Blog::where('url', $this->path)->first()->id;
     }
 });
 ?>
@@ -59,10 +56,14 @@ mount(function () {
     <livewire:privacy-policy />
     @elseif($path == 'contact-us')
     <livewire:contact-us />
-    @elseif($path == 'blog')
-    <livewire:blog :id="$blog_id" />
     @elseif($path == 'testimonial')
     <livewire:testimonial />
+    @elseif($path == 'blog')
+    <livewire:blog :id="$blog_id" />
+    @elseif(in_array($this->path, $this->blogUrls))
+    <livewire:blog :id="$blog_id" />
+    @else
+    {{abort(404)}}
     @endif
     <livewire:footer />
     @endif

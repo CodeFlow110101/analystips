@@ -32,6 +32,7 @@ on(['blog-submit' => function ($validationKey, $validationMessage, $imageName, $
                 'title' => $this->title,
                 'description' => $this->description,
                 'heading' => $this->heading,
+                'url' => strtolower(trim(str_replace(' ', '-', $this->title))),
             ]);
         } else {
             Blog::create([
@@ -39,6 +40,7 @@ on(['blog-submit' => function ($validationKey, $validationMessage, $imageName, $
                 'description' => $this->description,
                 'heading' => $this->heading,
                 'image' => $imagePath,
+                'url' => strtolower(trim(str_replace(' ', '-', $this->title))),
             ]);
         }
 
