@@ -17,11 +17,6 @@ with(fn() => [
     'recent_blogs' => Blog::orderBy('created_at', 'desc')->get()->take(5)
 ]);
 
-// $redirectToBlog = function ($id) {
-//     session()->flash('blogId', $id);
-//     return $this->redirectRoute('blog', navigate: true);
-// };
-
 mount(function ($id) {
     if ($id) {
         $this->id = $id;

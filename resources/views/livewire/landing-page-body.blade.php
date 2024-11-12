@@ -579,7 +579,7 @@ mount(function () {
                 <div class="flex justify-center">
                     <img src="{{asset('storage/'.$blog->image)}}" class="w-auto h-64">
                 </div>
-                <a href="/blog?id={{$blog->id}}" wire:navigate class="hover:text-amber-500 text-xl cursor-pointer">
+                <a href="/{{$blog->url}}" wire:navigate class="hover:text-amber-500 text-xl cursor-pointer">
                     {{$blog->title}}
                 </a>
                 <div class="text-sm text-gray-400 font-medium w-min whitespace-nowrap flex justify-center gap-2 items-center">
@@ -592,7 +592,7 @@ mount(function () {
                 </div>
                 <div class="text-sm leading-6 font-light text-black">{{Str::limit($blog->heading, 150)}}</div>
                 <div class="pt-4">
-                    <a href="/blog?id={{$blog->id}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</a>
+                    <a href="/{{$blog->url}}" wire:navigate class="text-center font-light text-white text-sm uppercase bg-amber-500 whitespace-nowrap py-2 px-8 w-min cursor-pointer transition-colors duration-500 border hover:border-amber-500 hover:bg-white hover:text-amber-500">Read more</a>
                 </div>
             </div>
             @endforeach
